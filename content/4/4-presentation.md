@@ -1,5 +1,7 @@
 # IV - Les States
 
+---
+
 ## Sommaire
 
 * [Les états du composants](#les-états-du-composants)
@@ -13,19 +15,27 @@
 * [Passer des états à un composant enfant](#passer-des-états-à-un-composant-enfant)
 * [Exercice](#exercice)
 
+---
+
 ## Les états du composants
 
 * Un composant possède des états par défault (Lifecycle)
 * On peut lui définir des états par défauts qui évoluent au fil de la vie du composant. (isClicked: false par défaut puis true lorsqu'un bouton est cliqué)
 * La modification d'un état du composant entraine un update du component (re-render du composant)
 
+---
+
 ## Props et State
+
+---
 
 ### Props
 
 * Ils sont immutables
 * Sont utilisé pour passer des data aux enfants
 * Plus performants que les states pour passer des données
+
+---
 
 ### States
 
@@ -34,7 +44,11 @@
 * Sont mutables
 * Pour passer des états aux enfants, utilisez des props :-)
 
+---
+
 ### Dans les faits
+
+---
 
 * Dans la plupart des cas les composants s'organise comme ça:
 
@@ -42,9 +56,13 @@
     * Les états sont passés en props aux enfants (au besoin)
     * Les enfants, sauf cas spécifiques ont trés peu besoin de gérer les états.
 
-## Lifecycle
+---
 
-* React possède des functions interne lui permettant de connaitre l'état du composant.
+## Lifecycle (TODO définir?)
+
+---
+
+* React possède des fonctions interne lui permettant de connaitre l'état du composant.
 * componentWillMount: Méthode appellée juste avant le rendu du composant (client + serveur)
 * componentDidMount: Méthode appellée au moment du rendu côté client
 * componentWillReceiveProps: Méthode appellée au moment où le composant reçoit des props,
@@ -64,9 +82,15 @@ Dans les faits on utilise trés peu cette méthode. (1)
     sont état initial c'est à dire "zero". Je vais voir que le composant se met bien à jour (shouldComponentUpdate),
     par contre si j'inspecte le dom aucune modification n'est fait.
 
+---
+
 ## Exemple
 
+---
+
 * Utilisation des Méthodes interne du composant pour mettre en place un timer
+
+---
 
 ```javascript
 class Counter extends React.Component {
@@ -100,7 +124,11 @@ class Counter extends React.Component {
 ReactDOM.render(<Counter />, document.querySelector('#root'));
 ```
 
+---
+
 * Voir quand les Méthodes internes sont trigger (https://jsfiddle.net/twh5fryy/6/)
+
+---
 
 ```javascript
 class App extends React.Component {
@@ -175,7 +203,7 @@ class Component extends React.Component {
   }
   render() {
     return (
-    	<li>{this.props.value} <button data-value={this.props.value} onClick={this.props.removeItem.bind(this)}>X</button></li>
+        <li>{this.props.value} <button data-value={this.props.value} onClick={this.props.removeItem.bind(this)}>X</button></li>
     );
   }
 }
@@ -183,9 +211,13 @@ class Component extends React.Component {
 ReactDOM.render( < App / > , document.querySelector('#root'));
 ```
 
+---
+
 ## Définir les états
 
 * Nous pouvons définir des états par défaut à notre composant lors de son initialisation dans le constructor
+
+---
 
 ```javascript
 class Component extends React.Component {
@@ -197,10 +229,14 @@ class Component extends React.Component {
     }
 }
 ```
+---
+
 
 ## Modifier les états
 
 * React intègre une méthode setState pour modifier les états d'un composants
+
+---
 
 ```javascript
 class Component extends React.Component {
@@ -220,9 +256,13 @@ class Component extends React.Component {
 }
 ```
 
+---
+
 ## Passer des états à un composant enfant
 
 * En se reposant sur les props, il est possible de passer l'état d'un composant parent à son enfant sous forme de prop.
+
+---
 
 ```javascript
 class FirstComponent extends React.Component {
@@ -247,6 +287,8 @@ class SecondComponent extends React.Component {
     }
 }
 ```
+
+---
 
 ## Exercice
 

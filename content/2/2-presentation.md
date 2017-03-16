@@ -1,5 +1,7 @@
 # II - Créer un composant
 
+---
+
 ## Sommaire
 
 * [JSX](#jsx)
@@ -8,13 +10,19 @@
 * [Rendre le composant dans la page](#rendre-le-composant-dans-la-page)
 * [Exercice](#exercice)
 
+---
+
 ## JSX
 
 - [JSX](https://facebook.github.io/jsx/) est une extension de la syntaxe de JavaScript.
 - On peut facilement le prendre main
 - On peut utiliser écrire ses composants avec ou sans JSX (Mais c'est préférable d'utiliser JSX).
 
+---
+
 ### JSX V.S Plain JS
+
+---
 
 ```javascript
 // Exemple pris de la doc react
@@ -30,7 +38,11 @@ var app = React.createElement(
 );
 ```
 
+---
+
 ### Syntaxe
+
+---
 
 ```javascript
 // on peut éxécuter du JavaScript parmis le markup avec des "curly-brackets"
@@ -87,7 +99,11 @@ render() {
 }
 ```
 
+---
+
 ### Les choses à savoir
+
+---
 
 - Vous voulez ajouter une classe donc vous faites :
 
@@ -101,6 +117,8 @@ render() {
 // Error: Warning: Unknown DOM property class. Did you mean className?
 
 ```
+
+---
 
 - En JavaScript 'Class' et 'For' sont des namespaces réservés, il faut les remplacer par 'className' et 'htmlFor'.
 - Les events sont attachés aux composants au format camelCase (onClick is back :) )
@@ -119,12 +137,18 @@ render() {
 }
 ```
 
+---
+
 ## Qu'est ce qu'un composant
+
+---
 
 - On peut voir les composants comme des fonctions qui recoivent des 'props' et des 'states'
 (on verra ça en détails plus tard) et qui affichent du HTML.
 - Dans l'idée ce sont des petits modules qu'on peut facilement réutiliser (penser aux légo, a Twig, aux partials (rails))
 - Depuis React 14 on distingue deux types de composants: Stateless et Statefull (on verra ça plus tard).
+
+---
 
 ## Définir un composant
 
@@ -150,6 +174,8 @@ class MonComposant extends React.Component {
 
 - Le composant est maintenant prêt, dans il nous reste plus qu'à le rendre dans le DOM.
 
+---
+
 ## Rendre le composant dans la page
 
 - React nous permet de créer des composants mais ça s'arrête là.
@@ -159,6 +185,8 @@ class MonComposant extends React.Component {
     - React blessed : https://github.com/Yomguithereal/react-blessed
     - React GL : https://projectseptemberinc.gitbooks.io/gl-react/content/
     - React Canvas : https://github.com/Flipboard/react-canvas
+
+---
 
 
 ```javascript
@@ -185,6 +213,8 @@ let root = document.querySelector('#root');
 // ici on lui dit 'Prends MonComposant et affiche le moi dans #root'
 ReactDOM.render(<MonComposant />, root);
 ```
+
+---
 
 ## Exercice
 

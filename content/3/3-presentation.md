@@ -1,5 +1,7 @@
 # III - Les props
 
+---
+
 ## Sommaire
 
 * [Qu'est ce que les "Props"](#quest-ce-que-les-props)
@@ -7,13 +9,19 @@
 * [Le cas de children](#le-cas-de-children)
 * [Exercice](#exercice)
 
+---
+
 ## Qu'est ce que les "Props"
+
+---
 
 * Props est le diminutif de 'properties'.
 * Les props sont un moyen de passer des données d'un composant à un autre.
 * Ils s'écrivent à la manières des "data attributes" en html.
 * On peut leur faire passer tout type de données (String, Array, Objects, function...)
 * !! Les props sont immutables
+
+---
 
 ### Exemple
 
@@ -80,7 +88,11 @@ class ChildComponent extends React.Component {
 
 ```
 
+---
+
 ## Les propsTypes
+
+---
 
 * Plus l'application sur laquelle on travail grossit, plus on va vouloir réutiliser nos composants,
 comme les composants vont être réutilisés dans des contextes différents, il va falloir s'assurer que
@@ -88,11 +100,17 @@ les données que nous lui passons en props respectent le format de données atte
 * Les propsTypes nous permettent d'ajouter de la validation sur nos props,
 vérifier que le type de données que nous lui passons est une String, une function etc...
 
+---
+
 ### Exemple
+
+---
 
 * Imaginons nous sommes en train de développer une application et nous devons créer un champs de formulaire,
 il y a de forte chance pour que l'application ait besoin d'afficher plusieurs fois ce champs de formulaire
 dans des contextes différents (un champs de recherche, un champs pour entrer le titre d'un blog post...)
+
+---
 
 ```javascript
 
@@ -127,8 +145,12 @@ class Form extends React.Component {
 }
 ```
 
+---
+
 * Notre composant est réutilisable c'est chouette, sauf que qu'est ce qui se passe si
 dans name je lui passe une fonction...
+
+---
 
 ```html
 <input data-reactroot=from"" type="text" name="function () {
@@ -137,6 +159,8 @@ dans name je lui passe une fonction...
 ```
 
 * Oups, ça va beaucoup moins bien fonctionner là, c'est là où les propsTypes vont rentrer en jeux.
+
+---
 
 ```javascript
 
@@ -176,11 +200,15 @@ class Form extends React.Component {
 }
 ```
 
+---
+
 * Maintenant en ayant définit des PropTypes pour mon composant Input j'ai une erreur qui apparait dans la console.
 
 ```
 Warning: Failed propType: Invalid prop `name` of type `function` supplied to `Input`, expected `string`. Check the render method of `Form`.
 ```
+
+---
 
 * Donc là il nous dit clairement ce qui ne va pas et où le corriger.
 * Les propType nous permettent de vérifier le type d'un props mais aussi sa présence avec la function .isRequired.
@@ -189,12 +217,16 @@ Warning: Failed propType: Invalid prop `name` of type `function` supplied to `In
     * Une documentation du code. Il me suffit de lire l'objet PropType pour connaitre les valeurs attendues pour mes props.
 * NB: onFocus n'a volontairement pas de PropType car c'est une function propre au composant React qui ajoute un listenner sur le focus. Par défaut React attends une function en props et vous averti en cas d'erreur si vous ajoutez autre chose qu'une function.
 
+---
+
 ## Le cas de children
 
 * React intégre par défaut un props 'children'.
 * Ce props children retourne tout ce qu'on passe entre la balise ouvrante et fermante du component.
 * props.children peut-être à la fois un tableau et un objet. Si on lui passe plusieurs components, ce sera un Array,
 sinon ce sera un objet.
+
+---
 
 ### Example
 
@@ -204,6 +236,8 @@ sinon ce sera un objet.
         * Un component FirstComponent qui se content d'afficher ce qu'on lui passe (this.props.children)
         * SecondComponent qui affiche "Content of SecondComponent"
         * ThirdComponent qui affiche "Third component"
+
+---
 
 ```javascript
 
@@ -247,6 +281,8 @@ class ThirdComponent extends React.Component {
 const root = document.querySelector('#root');
 ReactDOM.render(<App />, root);
 ```
+
+---
 
 ## Exercice
 
