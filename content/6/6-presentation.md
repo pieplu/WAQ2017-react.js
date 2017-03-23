@@ -1,6 +1,8 @@
-# VI - Les Css dans React
+## VI - Les Css dans React
 
-## Sommaire
+---
+
+### Sommaire
 
 * [Introduction](#introduction)
 * [La manière classique](#la-manière-classique)
@@ -10,7 +12,9 @@
 * [Les css-modules](#les-css-modules)
 * [Exercice](#exercice)
 
-## Introduction
+---
+
+### Introduction
 
 * Comme on l'a vu les composants React regroupe le markup et le javascript
 * Il est également possible d'ajouter les Css dans les composants, de manière inline,
@@ -18,14 +22,18 @@ avec ou sans module externe ou en utilisant les Css Modules.
 * Pour vous présenter les différentes approches on va utiliser exactement
 le même composant et les styles avec ces trois approches.
 
-## La manière classique
+---
+
+### La manière classique
 
 * La manière classique consiste à séparer les css dans un fichier global main.css,
 comme on le fait actuellement dans les plupart des projets.
 * Nos css sont donc appliqués au markup en reposant sur les class (classNames)
 que nous définissons dans nos composants.
 
-### Exemple
+---
+
+#### Exemple
 
 * Voici notre composant "counter" en css ainsi que le composant React correspondant
 * Tout est "normal" le css s'applique en fonction des classNames définit.
@@ -40,6 +48,8 @@ je vais avoir besoin de :
     * copier mon composant React dans mon nouveau projet
 
 * Ça fait pas mal de manipulation mais c'est pas non plus le Pérou.
+
+---
 
 ```css
 .counter {
@@ -82,6 +92,7 @@ je vais avoir besoin de :
       background: #e83523;
     }
 ```
+---
 
 ```javascript
 class Counter extends React.Component {
@@ -117,7 +128,9 @@ ReactDOM.render(<Counter />, node);
 // Tu trouveras la démo sur JsFiddle: https://jsfiddle.net/Lak049xL/8/
 ```
 
-## Utilisation des css inline
+---
+
+### Utilisation des css inline
 
 * Les css-inline nous permettent d'accrôitre la réutilisabilité de nos composants
 * Ils permettent également d'avoir des styles "scopé" aux composants et ainsi
@@ -125,10 +138,13 @@ d'éviter des problème liés à la cascade.
 * Même si le ton de l'article est plutôt "trollesque" cet article est intéressant à lire http://putaindecode.io/fr/articles/css/stop-css/
 * À voir aussi une présentation de Vjeux (Un ingénieur de chez Facebook) sur les Css dans React : https://speakerdeck.com/vjeux/react-css-in-js
 
+---
 
-### React way
+#### React way
 
 * Par défaut, React nous permet d'écrire du css dans nos composants de cette manière:
+
+---
 
 ```javascript
 const styles = {
@@ -196,10 +212,14 @@ ReactDOM.render(<Counter />, node);
 // Tu trouveras la démo sur JsFiddle: https://jsfiddle.net/rosqu0x3/
 ```
 
+---
+
 * C'est pratique si vous qu'un composant soit "standalone" seulement ça ne gère pas les pseudo-classes,
 donc pas de hover, de focus etc..
 
-### Radium
+---
+
+#### Radium
 
 * Radium est un module React dévloppé par Formidable http://stack.formidable.com/radium/
 * Il s'inspire de ce que propose React pour la gestion des styles mais va plus loin en ajoutant :
@@ -211,6 +231,8 @@ donc pas de hover, de focus etc..
 
 * De cette manière notre composant est totalement autonome, je peux facilement
 le trimballer de projet en projet sans trop d'effort.
+
+---
 
 ```javascript
 class Counter extends React.Component {
@@ -246,6 +268,8 @@ ReactDOM.render(<Counter />, node);
 // Tu trouveras la démo sur JsFiddle: https://jsfiddle.net/4L7cfxx2/1/
 ```
 
+---
+
 * Les css-inline sont intéressants dans React pour plusieurs raisons:
     * Ils permettent d'avoir toute la logique de rendu dans un seul et même fichier (le .jsx/.js)
     * Ils permettent d'accroitre la réutilisabilité des composants sans efforts.
@@ -256,14 +280,22 @@ ReactDOM.render(<Counter />, node);
 * Par contre, qu'est ce qui se passe si un intervennant sans trop de connaissance de React doit intervenir
 sur la partie Css de l'application ? Là c'est problématique...
 
-## Les css-modules
+---
+
+### Les css-modules
+
+---
 
 * Les css-modules nous permettent un peu de combiner l'écriture classique des css et le inline-style.
 * Dans la pratique, un css module est attaché à un composant React, le fichier css possède des classes pouvant être
 très générique (.base, .primary) et au moment du rendu les classes seront réécrite puis attaché au noeux du DOM
 auquels elles doivent s'appliquer.
 
-### Exemple
+---
+
+#### Exemple
+
+---
 
 ```scss
 // ./components/counter/counter.scss
@@ -306,6 +338,9 @@ auquels elles doivent s'appliquer.
           background: #e83523;
       }
 ```
+
+---
+
 ```javascript
 import React from 'react';
 import CSSModules from 'react-css-modules';
@@ -340,6 +375,9 @@ class Counter extends React.Component {
 
 export default CSSModules(Counter, styles);
 ```
+
+---
+
 * Voici le rendu Html
 * Comme on peut le voir les classes sont re-écrite de cette manière le scope des styles est locale
 et ne risque pas de rentrer en collision avec d'autres classes.
@@ -353,11 +391,15 @@ et ne risque pas de rentrer en collision avec d'autres classes.
 </div>
 ```
 
+---
+
 * On définit une fichier (dans mon exemple) .scss que nous vennons attacher au composant (import styles from './counter.scss';)
 * On attache les classes css au composant en utilisant la propriété "styleName"
 * Et hop on est prêt !
 
-## Exercice
+---
+
+### Exercice
 
 - Allez dans le dossier exercice et faites ```git checkout exercice-5```
 - Ouvrir le dossier formation-react-exercices dans votre éditeur préféré et lisez TODO.MD

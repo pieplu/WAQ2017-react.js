@@ -1,8 +1,8 @@
-# II - Créer un composant
+## II - Créer un composant
 
 ---
 
-## Sommaire
+### Sommaire
 
 * [JSX](#jsx)
 * [Qu'est ce qu'un composant](#quest-ce-quun-composant)
@@ -12,7 +12,7 @@
 
 ---
 
-## JSX
+### JSX
 
 - [JSX](https://facebook.github.io/jsx/) est une extension de la syntaxe de JavaScript.
 - On peut facilement le prendre main
@@ -20,7 +20,7 @@
 
 ---
 
-### JSX V.S Plain JS
+#### JSX V.S Plain JS
 
 ---
 
@@ -40,7 +40,7 @@ var app = React.createElement(
 
 ---
 
-### Syntaxe
+#### Syntaxe
 
 ---
 
@@ -101,7 +101,7 @@ render() {
 
 ---
 
-### Les choses à savoir
+#### Les choses à savoir
 
 ---
 
@@ -139,7 +139,7 @@ render() {
 
 ---
 
-## Qu'est ce qu'un composant
+### Qu'est ce qu'un composant
 
 ---
 
@@ -150,7 +150,7 @@ render() {
 
 ---
 
-## Définir un composant
+### Définir un composant
 
 - Voici comment nous pouvons définir trés simplement un composant.
 
@@ -176,7 +176,7 @@ class MonComposant extends React.Component {
 
 ---
 
-## Rendre le composant dans la page
+### Rendre le composant dans la page
 
 - React nous permet de créer des composants mais ça s'arrête là.
 - Nous pouvons rendre les composants dans le DOM grâce à React-dom.
@@ -216,16 +216,16 @@ ReactDOM.render(<MonComposant />, root);
 
 ---
 
-## Exercice
+### Exercice
 
-### Pré-recquis
+#### Pré-recquis
 
 - [Node.js](https://nodejs.org/en/)
 - [NVM](https://github.com/creationix/nvm)
 - [Git](https://git-scm.com/)
 
 
-### Mise en place
+#### Mise en place
 
 - Cloner le repository ```$ git clone -b exercice-1 git@gitlab.savoirfairelinux.com:frontend/formation-react-exercices.git```
 - ```$ cd formation-react-exercices```

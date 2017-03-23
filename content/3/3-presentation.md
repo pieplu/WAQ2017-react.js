@@ -1,8 +1,8 @@
-# III - Les props
+## III - Les props
 
 ---
 
-## Sommaire
+### Sommaire
 
 * [Qu'est ce que les "Props"](#quest-ce-que-les-props)
 * [Les propsTypes](#les-propstypes)
@@ -11,7 +11,7 @@
 
 ---
 
-## Qu'est ce que les "Props"
+### Qu'est ce que les "Props"
 
 ---
 
@@ -23,7 +23,7 @@
 
 ---
 
-### Exemple
+#### Exemple
 
 ```javascript
 // On définit un component au nom original de Component
@@ -90,7 +90,7 @@ class ChildComponent extends React.Component {
 
 ---
 
-## Les propsTypes
+### Les propsTypes
 
 ---
 
@@ -102,7 +102,7 @@ vérifier que le type de données que nous lui passons est une String, une funct
 
 ---
 
-### Exemple
+#### Exemple
 
 ---
 
@@ -219,7 +219,7 @@ Warning: Failed propType: Invalid prop `name` of type `function` supplied to `In
 
 ---
 
-## Le cas de children
+### Le cas de children
 
 * React intégre par défaut un props 'children'.
 * Ce props children retourne tout ce qu'on passe entre la balise ouvrante et fermante du component.
@@ -228,7 +228,7 @@ sinon ce sera un objet.
 
 ---
 
-### Example
+#### Example
 
 * Dans cet exemple on définit  4 Components :
     * Un premier qui sera notre Component "Master ou Root" (App)
@@ -284,7 +284,7 @@ ReactDOM.render(<App />, root);
 
 ---
 
-## Exercice
+### Exercice
 
 - Allez dans le dossier exercice et faites ```git checkout exercice-2```
 - ```$ npm run start```

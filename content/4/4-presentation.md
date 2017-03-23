@@ -1,8 +1,8 @@
-# IV - Les States
+## IV - Les States
 
 ---
 
-## Sommaire
+### Sommaire
 
 * [Les états du composants](#les-états-du-composants)
 * [Props et State](#props-et-state)
@@ -17,7 +17,7 @@
 
 ---
 
-## Les états du composants
+### Les états du composants
 
 * Un composant possède des états par défault (Lifecycle)
 * On peut lui définir des états par défauts qui évoluent au fil de la vie du composant. (isClicked: false par défaut puis true lorsqu'un bouton est cliqué)
@@ -25,11 +25,11 @@
 
 ---
 
-## Props et State
+### Props et State
 
 ---
 
-### Props
+#### Props
 
 * Ils sont immutables
 * Sont utilisé pour passer des data aux enfants
@@ -37,7 +37,7 @@
 
 ---
 
-### States
+#### States
 
 * Dans l'idéal les states doivent être gérés dans le composant "Master"
 * Sont moins perfomants pour passer beaucoup de données
@@ -46,7 +46,7 @@
 
 ---
 
-### Dans les faits
+#### Dans les faits
 
 ---
 
@@ -58,7 +58,7 @@
 
 ---
 
-## Lifecycle (TODO définir?)
+### Lifecycle (TODO définir?)
 
 ---
 
@@ -84,7 +84,7 @@ Dans les faits on utilise trés peu cette méthode. (1)
 
 ---
 
-## Exemple
+### Exemple
 
 ---
 
@@ -213,7 +213,7 @@ ReactDOM.render( < App / > , document.querySelector('#root'));
 
 ---
 
-## Définir les états
+### Définir les états
 
 * Nous pouvons définir des états par défaut à notre composant lors de son initialisation dans le constructor
 
@@ -232,7 +232,7 @@ class Component extends React.Component {
 ---
 
 
-## Modifier les états
+### Modifier les états
 
 * React intègre une méthode setState pour modifier les états d'un composants
 
@@ -258,7 +258,7 @@ class Component extends React.Component {
 
 ---
 
-## Passer des états à un composant enfant
+### Passer des états à un composant enfant
 
 * En se reposant sur les props, il est possible de passer l'état d'un composant parent à son enfant sous forme de prop.
 
@@ -290,7 +290,7 @@ class SecondComponent extends React.Component {
 
 ---
 
-## Exercice
+### Exercice
 
 - Allez dans le dossier exercice et faites ```git checkout exercice-3```
 - ```$ npm run start```

@@ -1,8 +1,8 @@
-# V - Faites communiquer vos composants
+## V - Faites communiquer vos composants
 
 ---
 
-## Sommaire
+### Sommaire
 
 * [Communication parent vers enfant](#communication-parent-vers-enfant)
 * [Communication enfant vers parent](#communication-enfant-vers-parent)
@@ -14,14 +14,14 @@
 
 ---
 
-## Communication parent vers enfant
+### Communication parent vers enfant
 
 * C'est le cas le plus simple et le plus courant
 * On peut faire passer des données d'un parent à un enfant sous forme de properties
 
 ---
 
-### Exemple
+#### Exemple
 
 * Souvenez vous de l'exemple du Elmo...
 
@@ -59,7 +59,7 @@ class ChildComponent extends React.Component {
 
 ---
 
-## Communication enfant vers parent
+### Communication enfant vers parent
 
 * C'est exactement ce    qu'on à fait dans l'exercice précédent, au clique sur
 le bouton 'supprimer' du panier on vennait faire ça : http://cloud.tonours.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=1428&y=1000&a=false&file=cart.jpg&t=XwIZyg7ciQqkxX2
@@ -67,11 +67,11 @@ le bouton 'supprimer' du panier on vennait faire ça : http://cloud.tonours.fr/i
 
 ---
 
-## Point rapide composant Statefull et Stateless
+### Point rapide composant Statefull et Stateless
 
 ---
 
-### Stateless
+#### Stateless
 
 ---
 
@@ -112,7 +112,7 @@ ReactDOM.render(<App data={items} />, node);
 
 ---
 
-### Statefull
+#### Statefull
 
 * Les composants stateFull vont être des class qui héritent de React.Component.
 * Ces composants sont dit "Statefull" car ils nous permettent de gérer l'état d'un composant
@@ -168,7 +168,7 @@ ReactDOM.render(<App />, node);
 
 ---
 
-## L'attribut Ref
+### L'attribut Ref
 
 * L'attribut ref nous permet de venir récupérer le DOM rendu par un composant.
 * Comme il nous renvoit un élément du DOM on peut le manipuler avec l'API DOM,
@@ -176,7 +176,7 @@ ex: this.login.focus() va focuser le champs login.
 
 ---
 
-### Exemple
+#### Exemple
 
 * Un cas d'usage plutôt commun est celui de la récupération de la valeur d'un champ de formulaire
 
@@ -215,7 +215,7 @@ ReactDOM.render(<Login />, node);
 
 ---
 
-## Exercice
+### Exercice
 
 - Allez dans le dossier exercice et faites ```git checkout exercice-4```
 - ```$ npm run start```

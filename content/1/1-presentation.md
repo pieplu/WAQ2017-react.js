@@ -1,4 +1,4 @@
-## Sommaire
+### Sommaire
 
 * [ES6](#es6)
 * [Let et Const](#let-et-const)
@@ -10,14 +10,14 @@
 
 ---
 
-# I A - Point rapide ES6
+## I A - Point rapide ES6
 
 Les exercices de la formation ainsi que les exemples seront tous en ES6.
 On va donc faire un petit "check-up" pour que tout le monde parte du bon pied.
 
 ---
 
-## ES6
+### ES6
 
 * Nouvelle version de language JavaScript.
 * Sortie en Juin 2015.
@@ -25,17 +25,17 @@ On va donc faire un petit "check-up" pour que tout le monde parte du bon pied.
 
 ---
 
-## Let et Const
+### Let et Const
 
 ---
 
-### Const
+#### Const
 
 * Const ne peut être assigné qu'une seule fois et a pour portée le bloc.
 
 ---
 
-#### Exemples :
+##### Exemples :
 
 ```javascript
 const toto = 'hello';
@@ -54,7 +54,7 @@ sayHello();
 
 ---
 
-#### Exemples :
+##### Exemples :
 
 ```javascript
 const toto = 'hello';
@@ -75,14 +75,14 @@ sayHello();
 
 ---
 
-### Let
+#### Let
 
 * Let c'est un peu le nouveau var, sauf qu'il est scopé au bloc.
 * Il fait sensiblement la même chose que const mais sa valeur peu lui être ré-assignée.
 
 ---
 
-#### Exemples :
+##### Exemples :
 
 ```javascript
 let toto = 'Hello';
@@ -108,14 +108,14 @@ console.log(toto2);
 
 ---
 
-## Les classes
+### Les classes
 
 * En fait ça ajoute aucune fonctionnalité par rapport a ES5.
 * Par contre la syntaxe est bien plus facile à lire
 
 ---
 
-#### Exemples :
+##### Exemples :
 
 ```javascript
 // ES5
@@ -157,7 +157,7 @@ console.log(barnabe.sayHello());
 
 * On peut facilement faire de l'héritage avec le mot clé extends
 
-#### Exemples :
+##### Exemples :
 
 ```javascript
 class Person {
@@ -209,14 +209,14 @@ console.log(barnabe.yell);
 
 ---
 
-## Les fonctions fléchés
+### Les fonctions fléchés
 
 * Elle offre une syntaxe plus courte
 * Elle ne possède pas de this
 
 ---
 
-#### Exemple :
+##### Exemple :
 
 ```javascript
 var nums = [1,2,3,4,5,6,7,8];
@@ -232,7 +232,7 @@ nums.forEach( nun => console.log(num));
 
 ---
 
-## Export / Import
+### Export / Import
 
 * On peut facilement exporter notre code sous forme de module et l'importer.
 * Voyez ça un peu comme des require
@@ -240,7 +240,7 @@ nums.forEach( nun => console.log(num));
 
 ---
 
-#### Exemples :
+##### Exemples :
 
 * Import d'une function Annonyme
 
