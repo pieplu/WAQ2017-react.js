@@ -1,22 +1,12 @@
-## II - Créer un composant
-
----
-
-### Sommaire
-
-* [JSX](#jsx)
-* [Qu'est ce qu'un composant](#quest-ce-quun-composant)
-* [Définir un composant](#définir-un-composant)
-* [Rendre le composant dans la page](#rendre-le-composant-dans-la-page)
-* [Exercice](#exercice)
+## Créer un composant
 
 ---
 
 ### JSX
 
-- [JSX](https://facebook.github.io/jsx/) est une extension de la syntaxe de JavaScript.
-- On peut facilement le prendre main
-- On peut utiliser écrire ses composants avec ou sans JSX (Mais c'est préférable d'utiliser JSX).
+- JSX est une extension de la syntaxe de JavaScript.. <!-- .element: class="fragment" -->
+- Facile à prendre en main. <!-- .element: class="fragment" -->
+- React fonctionne aussi sans JSX. <!-- .element: class="fragment" -->
 
 ---
 

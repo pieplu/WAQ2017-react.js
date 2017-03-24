@@ -1166,7 +1166,6 @@ body {
 .reveal .overlay .viewport {
   position: absolute;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   top: 40px;
@@ -1363,3 +1362,6 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+.text--center {
+  text-align: center; }

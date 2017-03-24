@@ -1,27 +1,12 @@
-### Sommaire
-
-* [ES6](#es6)
-* [Let et Const](#let-et-const)
-* [Les classes](#les-classes)
-* [Les fonctions fléchés](#les-fonctions-fléchés)
-* [Destructuring](#destructuring)
-* [Rest et Spread](#rest-et-spread)
-* [Export / Import](#export-import)
-
----
-
-## I A - Point rapide ES6
-
-Les exercices de la formation ainsi que les exemples seront tous en ES6.
-On va donc faire un petit "check-up" pour que tout le monde parte du bon pied.
+## Point rapide ES6
 
 ---
 
 ### ES6
 
-* Nouvelle version de language JavaScript.
-* Sortie en Juin 2015.
-* Ajoute pas mal de nouveautés : Classes, Modules, Generateurs, fonctions flécheés...
+* Nouvelle version de language JavaScript. <!-- .element: class="fragment" -->
+* Sortie en Juin 2015. <!-- .element: class="fragment" -->
+* Ajoute pas mal de nouveautés : Classes, Modules, Generateurs, fonctions flécheés... <!-- .element: class="fragment" -->
 
 ---
 
@@ -31,7 +16,8 @@ On va donc faire un petit "check-up" pour que tout le monde parte du bon pied.
 
 #### Const
 
-* Const ne peut être assigné qu'une seule fois et a pour portée le bloc.
+* Const ne peut être assigné qu'une seule fois. <!-- .element: class="fragment" -->
+* Il a pour portée le bloc. <!-- .element: class="fragment" -->
 
 ---
 
@@ -50,7 +36,7 @@ sayHello();
 // => Uncaught TypeError: Assignment to constant variable.
 ```
 
-* Normal, on veut ré-assigner la valeur de toto dans la function sayHello
+Note: Normal, on veut ré-assigner la valeur de toto dans la function sayHello
 
 ---
 
@@ -71,14 +57,14 @@ sayHello();
 // => 'titi'
 ```
 
-* Dans ce cas on a ré-assigner const toto mais dans le scope de la function.
+Note: Dans ce cas on a ré-assigner const toto mais dans le scope de la function.
 
 ---
 
 #### Let
 
-* Let c'est un peu le nouveau var, sauf qu'il est scopé au bloc.
-* Il fait sensiblement la même chose que const mais sa valeur peu lui être ré-assignée.
+* Let c'est un peu le nouveau var, sauf qu'il est scopé au bloc. <!-- .element: class="fragment" -->
+* Il fait sensiblement la même chose que const mais sa valeur peu lui être ré-assignée. <!-- .element: class="fragment" -->
 
 ---
 
@@ -110,8 +96,8 @@ console.log(toto2);
 
 ### Les classes
 
-* En fait ça ajoute aucune fonctionnalité par rapport a ES5.
-* Par contre la syntaxe est bien plus facile à lire
+* En fait ça ajoute aucune fonctionnalité par rapport a ES5. <!-- .element: class="fragment" -->
+* Par contre la syntaxe est bien plus facile à lire <!-- .element: class="fragment" -->
 
 ---
 
@@ -154,8 +140,6 @@ console.log(barnabe.sayHello());
 ```
 
 ---
-
-* On peut facilement faire de l'héritage avec le mot clé extends
 
 ##### Exemples :
 
@@ -207,12 +191,14 @@ console.log(barnabe.yell);
 // => Miaou
 ```
 
+Note: On peut facilement faire de l'héritage avec le mot clé extends
+
 ---
 
 ### Les fonctions fléchés
 
-* Elle offre une syntaxe plus courte
-* Elle ne possède pas de this
+* Elle offre une syntaxe plus courte <!-- .element: class="fragment" -->
+* Elle ne possède pas de this <!-- .element: class="fragment" -->
 
 ---
 
@@ -228,15 +214,15 @@ const nums = [1,2,3,4,5,6,7,8];
 nums.forEach( nun => console.log(num));
 ```
 
-* Dans notre cas (React) ça nous évite d'avoir a binder this et c'est chouette.
+Note: Dans notre cas (React) ça nous évite d'avoir a binder this et c'est chouette.
 
 ---
 
 ### Export / Import
 
-* On peut facilement exporter notre code sous forme de module et l'importer.
-* Voyez ça un peu comme des require
-* En es5 ça marche pas, pour le faire fonctionner il nous faut un outils comme Browserify, Webpack..
+* On peut facilement exporter notre code sous forme de module et l'importer. <!-- .element: class="fragment" -->
+* Voyez ça un peu comme des require. <!-- .element: class="fragment" -->
+* En es5 ça marche pas, pour le faire fonctionner il nous faut un outils comme Browserify, Webpack.. <!-- .element: class="fragment" -->
 
 ---
 
@@ -277,24 +263,4 @@ console.log(toto());
 // => Hello !
 console.log(titi());
 // => Goodbye !
-```
-
----
-
-* Et la globalement tu piges que tu peux avoir des function locale non exportable
-
-```javascript
-// /libs/toto/index.js
-function tata(name) {
-    return `Hola ${name}`;
-}
-export function titi() {
-    return tata('Joe');
-}
-
-// /app.js
-import {titi} from './libs/toto/index';
-
-console.log(titi());
-// => Hola Joe
 ```

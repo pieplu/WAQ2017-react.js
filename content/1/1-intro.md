@@ -1,26 +1,26 @@
-## I - Présentation
-
-React est une Bibliotheque JavaScript permettant de gérer son UI sous forme
-de composant.
+## Au secours de je dois apprendre React.js
 
 ---
 
-### Sommaire
+## C'est quoi React.js ?
 
-* [Historique](#historique)
-* [Pourquoi React](#pourquoi-react)
-* [Constats](#constats)
-* [Propositions](#propositions)
+- Une bibliotheque JavaScript. <!-- .element: class="fragment" -->
+
+- Elle permet de gérer son UI sous forme de composant. <!-- .element: class="fragment" -->
+
+- Pour résumer : c'est le V de MVC. <!-- .element: class="fragment" -->
 
 ---
 
 ### Historique
 
-- Crée par Jordan Walke (Facebook) ~ 2010/2011.
-- Utilisé sur Facebook (2011) puis Instagram (Pete Hunt).
-- Rendu Open-Source en 2013.
-- Actuellement en version 15.4.
-- React est utilisé en production par : Airbnb, Netflix, Feedly, Brackets...
+- Crée par Jordan Walke (Facebook) ~ 2010/2011. <!-- .element: class="fragment" -->
+- Utilisé sur Facebook (2011) puis Instagram (Pete Hunt). <!-- .element: class="fragment" -->
+- Rendu Open-Source en 2013. <!-- .element: class="fragment" -->
+- Actuellement en version 15.4. <!-- .element: class="fragment" -->
+- React est utilisé en production par : Airbnb, Netflix, Feedly, Brackets... <!-- .element: class="fragment" -->
+
+<!-- .element class="text--center" -->
 
 ---
 
@@ -33,14 +33,14 @@ React a été crée dans le but de réaliser des applications avec des données 
 ### Constats
 
 - Maintenir une application avec des données qui changent tout le temps :
-    - C'est compliqué (Codebase qui grossit à vue d'oeil, maintenabilité du code qui devient compliqué)
-    - Manipuler le DOM à outrance, ça coute cher en performance.
+    - C'est compliqué (Codebase qui grossit à vue d'oeil, maintenabilité du code qui devient compliqué) <!-- .element: class="fragment" -->
+    - Manipuler le DOM à outrance, ça coute cher en performance. <!-- .element: class="fragment" -->
 
 ---
 
 ### Propositions
 
-- Abstraire son interface sous forme de composants
-- Virtual DOM
-- One-way data flow
-- JSX
+- Abstraire son interface sous forme de composants <!-- .element: class="fragment" -->
+- Virtual DOM <!-- .element: class="fragment" -->
+- One-way data flow <!-- .element: class="fragment" -->
+- JSX <!-- .element: class="fragment" -->
