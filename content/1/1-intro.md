@@ -18,9 +18,7 @@
 - Utilisé sur Facebook (2011) puis Instagram (Pete Hunt). <!-- .element: class="fragment" -->
 - Rendu Open-Source en 2013. <!-- .element: class="fragment" -->
 - Actuellement en version 15.4. <!-- .element: class="fragment" -->
-- React est utilisé en production par : Airbnb, Netflix, Feedly, Brackets... <!-- .element: class="fragment" -->
-
-<!-- .element class="text--center" -->
+- React est utilisé en production par : Facebook, Airbnb, Netflix, Feedly, Brackets... <!-- .element: class="fragment" -->
 
 ---
 

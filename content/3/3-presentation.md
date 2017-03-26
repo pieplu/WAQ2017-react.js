@@ -1,25 +1,14 @@
-## III - Les props
-
----
-
-### Sommaire
-
-* [Qu'est ce que les "Props"](#quest-ce-que-les-props)
-* [Les propsTypes](#les-propstypes)
-* [Le cas de children](#le-cas-de-children)
-* [Exercice](#exercice)
+## Les props
 
 ---
 
 ### Qu'est ce que les "Props"
 
----
-
-* Props est le diminutif de 'properties'.
-* Les props sont un moyen de passer des données d'un composant à un autre.
-* Ils s'écrivent à la manières des "data attributes" en html.
-* On peut leur faire passer tout type de données (String, Array, Objects, function...)
-* !! Les props sont immutables
+* Props est le diminutif de 'properties'. <!-- .element: class="fragment" -->
+* Les props sont un moyen de passer des données d'un composant à un autre. <!-- .element: class="fragment" -->
+* Ils s'écrivent à la manières des "data attributes" en html. <!-- .element: class="fragment" -->
+* On peut leur faire passer tout type de données (String, Array, Objects, function...). <!-- .element: class="fragment" -->
+* Les props sont immutables. <!-- .element: class="fragment" -->
 
 ---
 
@@ -92,13 +81,8 @@ class ChildComponent extends React.Component {
 
 ### Les propsTypes
 
----
-
-* Plus l'application sur laquelle on travail grossit, plus on va vouloir réutiliser nos composants,
-comme les composants vont être réutilisés dans des contextes différents, il va falloir s'assurer que
-les données que nous lui passons en props respectent le format de données attendu.
-* Les propsTypes nous permettent d'ajouter de la validation sur nos props,
-vérifier que le type de données que nous lui passons est une String, une function etc...
+* Permet de vérifier les props. <!-- .element: class="fragment" -->
+* Documente nos composants. <!-- .element: class="fragment" -->
 
 ---
 
@@ -210,12 +194,9 @@ Warning: Failed propType: Invalid prop `name` of type `function` supplied to `In
 
 ---
 
-* Donc là il nous dit clairement ce qui ne va pas et où le corriger.
-* Les propType nous permettent de vérifier le type d'un props mais aussi sa présence avec la function .isRequired.
-* En pratique les propTypes apportenent deux choses :
-    * Un debuggage facile en cas d'erreur, typiquement un mauvais copié/collé d'un autre composant et on aurait passé 10 minutes à trouver d'ou ça vient.
-    * Une documentation du code. Il me suffit de lire l'objet PropType pour connaitre les valeurs attendues pour mes props.
-* NB: onFocus n'a volontairement pas de PropType car c'est une function propre au composant React qui ajoute un listenner sur le focus. Par défaut React attends une function en props et vous averti en cas d'erreur si vous ajoutez autre chose qu'une function.
+* React nous dit clairement ce qui ne va pas et où le corriger.
+* Un debuggage facile en cas d'erreur.
+* Une documentation du code.
 
 ---
 
@@ -231,11 +212,11 @@ sinon ce sera un objet.
 #### Example
 
 * Dans cet exemple on définit  4 Components :
-    * Un premier qui sera notre Component "Master ou Root" (App)
-    * Puis trois autres :
-        * Un component FirstComponent qui se content d'afficher ce qu'on lui passe (this.props.children)
-        * SecondComponent qui affiche "Content of SecondComponent"
-        * ThirdComponent qui affiche "Third component"
+* Un premier qui sera notre Component "Master ou Root" (App)
+* Puis trois autres :
+* Un component FirstComponent qui se content d'afficher ce qu'on lui passe (this.props.children)
+* SecondComponent qui affiche "Content of SecondComponent"
+* ThirdComponent qui affiche "Third component"
 
 ---
 
@@ -281,12 +262,3 @@ class ThirdComponent extends React.Component {
 const root = document.querySelector('#root');
 ReactDOM.render(<App />, root);
 ```
-
----
-
-### Exercice
-
-- Allez dans le dossier exercice et faites ```git checkout exercice-2```
-- ```$ npm run start```
-- Ouvrir votre navigateur à l'url : http://localhost:8080
-- Ouvrir le dossier formation-react-exercices dans votre éditeur préféré et lisez TODO.MD

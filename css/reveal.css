@@ -1363,5 +1363,6 @@ body {
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
 
-.text--center {
-  text-align: center; }
+.reveal pre code {
+  font-size: 0.6em;
+  line-height: 1em; }

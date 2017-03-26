@@ -4,7 +4,7 @@
 
 ### JSX
 
-- JSX est une extension de la syntaxe de JavaScript.. <!-- .element: class="fragment" -->
+- JSX est une extension de la syntaxe de JavaScript. <!-- .element: class="fragment" -->
 - Facile à prendre en main. <!-- .element: class="fragment" -->
 - React fonctionne aussi sans JSX. <!-- .element: class="fragment" -->
 
@@ -20,6 +20,7 @@
 
 // Input (JSX):
 var app = <Nav color="blue"><Profile>click</Profile></Nav>;
+
 // Output (JS):
 var app = React.createElement(
   Nav,
@@ -30,13 +31,13 @@ var app = React.createElement(
 
 ---
 
-#### Syntaxe
+#### Presentation
 
 ---
 
+###### Exécuter du JavaScript parmis le JSX
+
 ```javascript
-// on peut éxécuter du JavaScript parmis le markup avec des "curly-brackets"
-//
 render() {
     const myVariable = 4+4;
     return (
@@ -45,9 +46,13 @@ render() {
         </p>
     );
 }
+```
 
-// Ce qui peut être pratique pour faire des boucles
-//
+---
+
+###### Iterer sur un tableau
+
+```javascript
 render() {
     const names = ['Joe', 'Bob', 'Tom','Phil'];
     return(
@@ -58,7 +63,27 @@ render() {
         </ul>
     )
 }
+```
 
+---
+
+###### On peut faire des conditions
+
+```javascript
+// Ou des conditions...
+//
+render() {
+    return(
+        {true ? 'toto' : 'titi'}
+    )
+}
+```
+
+---
+
+###### On doit wrapper nos elements
+
+```javascript
 // On est obligé de wrapper plusieurs éléments dans un root container
 //
 render() {
@@ -79,14 +104,6 @@ render() {
         </div>
     );
 }
-
-// Ou des conditions...
-//
-render() {
-    return(
-        {true ? 'toto' : 'titi'}
-    )
-}
 ```
 
 ---
@@ -95,7 +112,7 @@ render() {
 
 ---
 
-- Vous voulez ajouter une classe donc vous faites :
+###### Vous voulez ajouter une classe donc vous faites
 
 ```javascript
 
@@ -110,8 +127,7 @@ render() {
 
 ---
 
-- En JavaScript 'Class' et 'For' sont des namespaces réservés, il faut les remplacer par 'className' et 'htmlFor'.
-- Les events sont attachés aux composants au format camelCase (onClick is back :) )
+'Class' et 'For' sont des namespaces réservés, il faut les remplacer par 'className' et 'htmlFor'.
 
 ```javascript
 render() {

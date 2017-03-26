@@ -101,7 +101,7 @@ console.log(toto2);
 
 ---
 
-##### Exemples :
+##### Classe es5 :
 
 ```javascript
 // ES5
@@ -119,7 +119,13 @@ var barnabe = new Person('Barnabé', 'Zebear');
 
 console.log(barnabe.sayHello());
 // => Hello i am Barnabé Zebear
+```
 
+---
+
+##### Classe es6 :
+
+```javascript
 // ES6
 
 class Person {
@@ -141,64 +147,10 @@ console.log(barnabe.sayHello());
 
 ---
 
-##### Exemples :
-
-```javascript
-class Person {
-    constructor(firstname, lastname) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-    }
-
-    sayHello() {
-        return `Hello i am ${this.firstname} ${this.lastname}`;
-    }
-}
-
-class Animal extends Person {
-    constructor(firstname, lastname, yellType) {
-        // Grace a super on recupere les methodes de la classe parente
-        super(firstname, lastname);
-        this.yellType = yellType;
-    }
-
-    sayYell() {
-        return `${this.firstname} make ${this.yellType}`;
-    }
-    // Exemple de getter
-    get yell() {
-        return this.yellType;
-    }
-
-    // Exemple de setter
-    set yell(value) {
-        return this.yellType = value;
-    }
-
-}
-
-const barnabe = new Animal('Barnabé', 'Zebear', 'Grr Grr Grr');
-
-console.log(barnabe.sayHello());
-// => Hello i am Barnabé Zebear
-console.log(barnabe.sayYell());
-// => Barnabé make Grr Grr Grr
-console.log(barnabe.yell);
-// => Grr Grr Grr
-
-barnabe.yell = 'Miaou';
-console.log(barnabe.yell);
-// => Miaou
-```
-
-Note: On peut facilement faire de l'héritage avec le mot clé extends
-
----
-
 ### Les fonctions fléchés
 
-* Elle offre une syntaxe plus courte <!-- .element: class="fragment" -->
-* Elle ne possède pas de this <!-- .element: class="fragment" -->
+* Elles offrent une syntaxe plus courte. <!-- .element: class="fragment" -->
+* Elles ne possèdent pas de this. <!-- .element: class="fragment" -->
 
 ---
 
@@ -220,15 +172,14 @@ Note: Dans notre cas (React) ça nous évite d'avoir a binder this et c'est chou
 
 ### Export / Import
 
-* On peut facilement exporter notre code sous forme de module et l'importer. <!-- .element: class="fragment" -->
+* Exporter notre code sous forme de module. <!-- .element: class="fragment" -->
+* Importer notre code sous forme de module. <!-- .element: class="fragment" -->
 * Voyez ça un peu comme des require. <!-- .element: class="fragment" -->
 * En es5 ça marche pas, pour le faire fonctionner il nous faut un outils comme Browserify, Webpack.. <!-- .element: class="fragment" -->
 
 ---
 
-##### Exemples :
-
-* Import d'une function Annonyme
+###### Import d'une function Annonyme
 
 ```javascript
 // /libs/toto/index.js
@@ -245,7 +196,7 @@ console.log(Toto());
 
 ---
 
-* Import de plusieurs functions
+###### Import de plusieurs functions
 
 ```javascript
 // /libs/toto/index.js
