@@ -45,36 +45,6 @@ class ChildComponent extends React.Component {
     }
 }
 
-// Second exemple
-
-class Component extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.click = () => alert('Yohooo');
-        this.name = "Elmo";
-        this.imageUrl = "https://pbs.twimg.com/profile_images/716986458406424576/8AOacOOQ.jpg";
-    }
-
-    render() {
-        return (
-            <ChildComponent name={this.name} image={this.imageUrl} click={this.click} />
-        );
-    }
-}
-
-// Et maintenant quand on clique sur Elmo une alert nous dit 'Yohooo'
-class ChildComponent extends React.Component {
-    render() {
-        return (
-            <div onClick={this.props.click}>
-                <img src={this.props.image} />
-                <h1>{this.props.name}</h1>
-            </div>
-        );
-    }
-}
-
 ```
 
 ---

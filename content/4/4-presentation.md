@@ -58,7 +58,7 @@
 
 ---
 
-### Lifecycle (TODO définir?)
+### Lifecycle
 
 ---
 

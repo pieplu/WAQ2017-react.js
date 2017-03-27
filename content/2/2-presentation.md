@@ -108,7 +108,7 @@ render() {
 
 ---
 
-#### Les choses à savoir
+### JSX: Les petites choses à savoir
 
 ---
 
@@ -118,6 +118,7 @@ render() {
 
 render() {
     <div class="toto">
+        Hello
     </div>
 }
 
@@ -127,7 +128,13 @@ render() {
 
 ---
 
-'Class' et 'For' sont des namespaces réservés, il faut les remplacer par 'className' et 'htmlFor'.
+### Pourquoi ?
+
+* 'Class' et 'For' sont des namespaces réservés. <!-- .element: class="fragment" -->
+* Il faut les remplacer par 'className' et 'htmlFor'. <!-- .element: class="fragment" -->
+* Les events sont attachés aux composants au format camelCase (onClick is back :) ). <!-- .element: class="fragment" -->
+
+---
 
 ```javascript
 render() {
@@ -147,18 +154,17 @@ render() {
 
 ### Qu'est ce qu'un composant
 
----
-
-- On peut voir les composants comme des fonctions qui recoivent des 'props' et des 'states'
-(on verra ça en détails plus tard) et qui affichent du HTML.
-- Dans l'idée ce sont des petits modules qu'on peut facilement réutiliser (penser aux légo, a Twig, aux partials (rails))
-- Depuis React 14 on distingue deux types de composants: Stateless et Statefull (on verra ça plus tard).
+- On peut voir les composants comme des fonctions qui recoivent des 'props' et des 'states' et qui affichent du HTML. <!-- .element: class="fragment" -->
+- Dans l'idée ce sont des petits modules qu'on peut facilement réutiliser. <!-- .element: class="fragment" -->
+- Depuis React 14 on distingue deux types de composants: Stateless et Statefull. <!-- .element: class="fragment" -->
 
 ---
 
 ### Définir un composant
 
-- Voici comment nous pouvons définir trés simplement un composant.
+---
+
+###### Notre composant
 
 ```javascript
 import React from 'react'; // On importe React sous forme de module (cf: Appendice 1)
@@ -178,22 +184,21 @@ class MonComposant extends React.Component {
 }
 ```
 
-- Le composant est maintenant prêt, dans il nous reste plus qu'à le rendre dans le DOM.
+---
+
+### Rendre le composant dans le DOM
 
 ---
 
-### Rendre le composant dans la page
+### React nous permet de créer des composants mais ça s'arrête là.
 
-- React nous permet de créer des composants mais ça s'arrête là.
-- Nous pouvons rendre les composants dans le DOM grâce à React-dom.
-- React possède d'autre renders :
-    - React native : https://facebook.github.io/react-native/
-    - React blessed : https://github.com/Yomguithereal/react-blessed
-    - React GL : https://projectseptemberinc.gitbooks.io/gl-react/content/
-    - React Canvas : https://github.com/Flipboard/react-canvas
+- Nous pouvons rendre les composants dans le DOM grâce à React-dom. <!-- .element: class="fragment" -->
+- React possède d'autre renders : <!-- .element: class="fragment" -->
+- React native (Mobile), React Blessed (App pour Terminal), React VR, React Canvas...<!-- .element: class="fragment" -->
 
 ---
 
+###### Rendre un composant dans le DOM
 
 ```javascript
 import React from 'react'; // On importe React sous forme de module (cf: Appendice 1)
@@ -213,30 +218,10 @@ class MonComposant extends React.Component {
     }
 }
 
-// On vient targeter l'id dans laquelle on veut rendre le composant
+// On vient targeter id dans laquelle on veut rendre le composant
 let root = document.querySelector('#root');
 // On untilise la function render de ReactDOM pour venir lui indiquer quoi faire
 // ici on lui dit 'Prends MonComposant et affiche le moi dans #root'
+
 ReactDOM.render(<MonComposant />, root);
 ```
-
----
-
-### Exercice
-
-#### Pré-recquis
-
-- [Node.js](https://nodejs.org/en/)
-- [NVM](https://github.com/creationix/nvm)
-- [Git](https://git-scm.com/)
-
-
-#### Mise en place
-
-- Cloner le repository ```$ git clone -b exercice-1 git@gitlab.savoirfairelinux.com:frontend/formation-react-exercices.git```
-- ```$ cd formation-react-exercices```
-- ```$ nvm install```
-- ```$ npm install```
-- ```$ npm run start```
-- Ouvrir votre navigateur à l'url : http://localhost:8080
-- Ouvrir le dossier formation-react-exercices dans votre éditeur préféré et lisez TODO.MD
