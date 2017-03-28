@@ -1,4 +1,4 @@
-## Au secours de je dois apprendre React.js
+## Au secours je dois apprendre React.js
 
 ---
 
