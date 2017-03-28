@@ -1,29 +1,17 @@
-## V - Faites communiquer vos composants
-
----
-
-### Sommaire
-
-* [Communication parent vers enfant](#communication-parent-vers-enfant)
-* [Communication enfant vers parent](#communication-enfant-vers-parent)
-* [Point rapide composant Statefull et Stateless](#point-rapide-composant-statefull-et-stateless)
-    * [Stateless](#stateless)
-    * [Statefull](#statefull)
-* [L'attribut Ref](#lattribut-ref)
-* [Exercice](#exercice)
+## Faites communiquer vos composants
 
 ---
 
 ### Communication parent vers enfant
 
-* C'est le cas le plus simple et le plus courant
-* On peut faire passer des données d'un parent à un enfant sous forme de properties
+* C'est le cas le plus simple et le plus courant. <!-- .element: class="fragment" -->
+* On peut faire passer des données d'un parent à un enfant sous forme de properties (props). <!-- .element: class="fragment" -->
 
 ---
 
 #### Exemple
 
-* Souvenez vous de l'exemple du Elmo...
+* Souvenez vous de l'exemple du Elmo... <!-- .element: class="fragment" -->
 
 ---
 
@@ -61,9 +49,7 @@ class ChildComponent extends React.Component {
 
 ### Communication enfant vers parent
 
-* C'est exactement ce    qu'on à fait dans l'exercice précédent, au clique sur
-le bouton 'supprimer' du panier on vennait faire ça : http://cloud.tonours.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=1428&y=1000&a=false&file=cart.jpg&t=XwIZyg7ciQqkxX2
-
+* TODO: Définir un bon exemple ici <!-- .element: class="fragment" -->
 
 ---
 
@@ -71,14 +57,11 @@ le bouton 'supprimer' du panier on vennait faire ça : http://cloud.tonours.fr/i
 
 ---
 
-#### Stateless
+### Stateless
 
----
-
-* On distingue deux types de composants, les composants Stateless et Statefull.
-* Les composant Stateless sont de simple function, elle peuvent recevoir des props et faire un render.
-* On peut utiliser ce type de composant lorsqu'on parle de "Dumb composant", c'est à dire des composants
-statiques dont le but est seulement d'afficher quelque chose comme le ferait Twig, Erb ou Handlebars.
+* Les composant Stateless sont de simple function, elle peuvent recevoir des props et faire un render. <!-- .element: class="fragment" -->
+* On peut utiliser ce type de composant lorsqu'on parle de "Dumb composant". <!-- .element: class="fragment" -->
+* Ce sont des composants statiques dont le but est seulement d'afficher quelque chose comme le ferait Twig, Erb ou Handlebars. <!-- .element: class="fragment" -->
 
 ---
 
@@ -112,12 +95,10 @@ ReactDOM.render(<App data={items} />, node);
 
 ---
 
-#### Statefull
+### Statefull
 
-* Les composants stateFull vont être des class qui héritent de React.Component.
-* Ces composants sont dit "Statefull" car ils nous permettent de gérer l'état d'un composant
-(State, LifeCycle)
-* C'est le type de composant que nous utilisons depuis le début de la formation
+* Les composants stateFull vont être des class qui héritent de React.Component. <!-- .element: class="fragment" -->
+* Ces composants sont dit "Statefull" car ils nous permettent de gérer l'état d'un composant (State, LifeCycle). <!-- .element: class="fragment" -->
 
 ---
 
@@ -170,15 +151,13 @@ ReactDOM.render(<App />, node);
 
 ### L'attribut Ref
 
-* L'attribut ref nous permet de venir récupérer le DOM rendu par un composant.
+* L'attribut ref nous permet de venir récupérer le DOM rendu par un composant. <!-- .element: class="fragment" -->
 * Comme il nous renvoit un élément du DOM on peut le manipuler avec l'API DOM,
-ex: this.login.focus() va focuser le champs login.
+ex: this.login.focus() va focuser le champs login. <!-- .element: class="fragment" -->
 
 ---
 
-#### Exemple
-
-* Un cas d'usage plutôt commun est celui de la récupération de la valeur d'un champ de formulaire
+#### Exemple: Récupérer les valeurs d'un formulaire
 
 ```javascript
 
@@ -212,12 +191,3 @@ ReactDOM.render(<Login />, node);
 
 // Tu peux voir le rendu sur : https://jsfiddle.net/x56t9nng/5/
 ```
-
----
-
-### Exercice
-
-- Allez dans le dossier exercice et faites ```git checkout exercice-4```
-- ```$ npm run start```
-- Ouvrir votre navigateur à l'url : http://localhost:8080
-- Ouvrir le dossier formation-react-exercices dans votre éditeur préféré et lisez TODO.MD

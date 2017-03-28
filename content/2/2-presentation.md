@@ -92,10 +92,6 @@ render() {
         <div>second</div>
     );
 }
-
-// SyntaxError: Adjacent JSX elements must be wrapped in an enclosing tag
-
-// Il faut wrapper ça
 render() {
     return (
         <div>
@@ -115,7 +111,6 @@ render() {
 ###### Vous voulez ajouter une classe donc vous faites
 
 ```javascript
-
 render() {
     <div class="toto">
         Hello
@@ -167,7 +162,7 @@ render() {
 ###### Notre composant
 
 ```javascript
-import React from 'react'; // On importe React sous forme de module (cf: Appendice 1)
+import React from 'react'; // On importe React sous forme de module
 
 // Maintenant que React est importé on va créer une classe
 // On va l'appeller 'MonComposant'
