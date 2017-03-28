@@ -17,6 +17,7 @@
 ```javascript
 // On définit un component au nom original de Component
 // Par défaut on initialise le nom et l'url de l'image
+
 class Component extends React.Component {
     constructor(props) {
         super(props);
@@ -31,9 +32,16 @@ class Component extends React.Component {
         );
     }
 }
+```
 
+---
+
+#### Exemple ChildComponent
+
+```javascript
 // On définit notre composant enfant
 // et on lui demande d'afficher les valeurs passés en props
+
 class ChildComponent extends React.Component {
     render() {
         return (
@@ -56,18 +64,9 @@ class ChildComponent extends React.Component {
 
 ---
 
-#### Exemple
-
----
-
-* Imaginons nous sommes en train de développer une application et nous devons créer un champs de formulaire,
-il y a de forte chance pour que l'application ait besoin d'afficher plusieurs fois ce champs de formulaire
-dans des contextes différents (un champs de recherche, un champs pour entrer le titre d'un blog post...)
-
----
+#### Exemple: Input réutilisable
 
 ```javascript
-
 class Input extends React.Component {
     render() {
         return (
@@ -79,7 +78,13 @@ class Input extends React.Component {
         );
     }
 }
+```
 
+---
+
+#### Exemple: Form
+
+```javascript
 class Form extends React.Component {
     constructor(props) {
         super(props);
@@ -101,8 +106,8 @@ class Form extends React.Component {
 
 ---
 
-* Notre composant est réutilisable c'est chouette, sauf que qu'est ce qui se passe si
-dans name je lui passe une fonction...
+* Notre composant est réutilisable c'est chouette !
+* Cependant si dans name je lui passe une fonction... <!-- .element: class="fragment" -->
 
 ---
 
@@ -112,12 +117,15 @@ dans name je lui passe une fonction...
         }" placeholder="Nom d'utilisateur">
 ```
 
-* Oups, ça va beaucoup moins bien fonctionner là, c'est là où les propsTypes vont rentrer en jeux.
+---
+
+* Ça va beaucoup moins bien fonctionner là.
+* C'est là où les propsTypes vont rentrer en jeux. <!-- .element: class="fragment" -->
 
 ---
 
+#### Exemple: Input
 ```javascript
-
 class Input extends React.Component {
     static propTypes = {
         type: React.PropTypes.string,
@@ -134,7 +142,12 @@ class Input extends React.Component {
         );
     }
 }
+```
 
+---
+
+#### Exemple: Form
+```javascript
 class Form extends React.Component {
     constructor(props) {
         super(props);
@@ -156,53 +169,69 @@ class Form extends React.Component {
 
 ---
 
-* Maintenant en ayant définit des PropTypes pour mon composant Input j'ai une erreur qui apparait dans la console.
+* Maintenant en ayant définit des PropTypes si je reload ma page.
 
-```
-Warning: Failed propType: Invalid prop `name` of type `function` supplied to `Input`, expected `string`. Check the render method of `Form`.
+---
+
+#### Exemple: Sortie de console du composant
+```javascript
+Warning: Failed propType: Invalid prop `name` of type `function` supplied
+to `Input`, expected `string`. Check the render method of `Form`.
 ```
 
 ---
 
 * React nous dit clairement ce qui ne va pas et où le corriger.
-* Un debuggage facile en cas d'erreur.
-* Une documentation du code.
+* Un debuggage facile en cas d'erreur. <!-- .element: class="fragment" -->
+* Une documentation du code. <!-- .element: class="fragment" -->
 
 ---
 
 ### Le cas de children
 
-* React intégre par défaut un props 'children'.
-* Ce props children retourne tout ce qu'on passe entre la balise ouvrante et fermante du component.
-* props.children peut-être à la fois un tableau et un objet. Si on lui passe plusieurs components, ce sera un Array,
-sinon ce sera un objet.
+* React intégre par défaut un props 'children'. <!-- .element: class="fragment" -->
+* Ce props children retourne tout ce qu'on passe entre la balise ouvrante et fermante du component. <!-- .element: class="fragment" -->
+* props.children peut-être à la fois un tableau et un objet. Si on lui passe plusieurs components, ce sera un Array, sinon ce sera un objet. <!-- .element: class="fragment" -->
 
 ---
 
-#### Example
+#### Component Inception
 
-* Dans cet exemple on définit  4 Components :
-* Un premier qui sera notre Component "Master ou Root" (App)
-* Puis trois autres :
-* Un component FirstComponent qui se content d'afficher ce qu'on lui passe (this.props.children)
-* SecondComponent qui affiche "Content of SecondComponent"
-* ThirdComponent qui affiche "Third component"
+![](images/react-child-component-diagram.svg)<!-- .element: class="img--no-border" -->
 
 ---
+
+#### Exemple: SecondComponent
 
 ```javascript
-
-class App extends React.Component {
+class SecondComponent extends React.Component {
   render(){
     return (
-         <FirstComponent>
-           <SecondComponent />
-            <ThirdComponent />
-        </FirstComponent>
+        <p>Content of SecondComponent</p>
     );
   }
 }
+```
 
+---
+
+#### Exemple: ThirdComponent
+
+```javascript
+class ThirdComponent extends React.Component {
+  render() {
+    return (
+      <p>Third Component</p>
+    );
+  }
+}
+```
+
+---
+
+#### Exemple: FirstComponent
+
+```javascript
 class FirstComponent extends React.Component {
   render() {
     return (
@@ -212,19 +241,21 @@ class FirstComponent extends React.Component {
     );
   }
 }
+```
 
-class SecondComponent extends React.Component {
+---
+
+#### Exemple: App
+
+```javascript
+
+class App extends React.Component {
   render(){
     return (
-        <p>Content of SecondComponent</p>
-    );
-  }
-}
-
-class ThirdComponent extends React.Component {
-  render() {
-    return (
-      <p>Third Component</p>
+         <FirstComponent>
+           <SecondComponent />
+           <ThirdComponent />
+        </FirstComponent>
     );
   }
 }

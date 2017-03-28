@@ -5,3 +5,11 @@
     font-size: 0.8em;
     line-height: 1em;
 }
+
+img.img--no-border {
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    width: 80% !important;
+    max-height: 95% !important;
+}
