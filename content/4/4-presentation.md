@@ -1,27 +1,12 @@
-## IV - Les States
-
----
-
-### Sommaire
-
-* [Les états du composants](#les-états-du-composants)
-* [Props et State](#props-et-state)
-    * [Props](#props)
-    * [States](#states)
-    * [Dans les faits](#dans-les-faits)
-* [Lifecycle](#lifecycle)
-* [Définir les états](#définir-les-états)
-* [Modifier les états](#modifier-les-états)
-* [Passer des états à un composant enfant](#passer-des-états-à-un-composant-enfant)
-* [Exercice](#exercice)
+## Les States
 
 ---
 
 ### Les états du composants
 
-* Un composant possède des états par défault (Lifecycle)
-* On peut lui définir des états par défauts qui évoluent au fil de la vie du composant. (isClicked: false par défaut puis true lorsqu'un bouton est cliqué)
-* La modification d'un état du composant entraine un update du component (re-render du composant)
+* Un composant possède des états par défault (Lifecycle). <!-- .element: class="fragment" -->
+* On peut lui définir des états par défauts et les faire évoler au fil de la vie du composant. <!-- .element: class="fragment" -->
+* La modification d'un état du composant entraine un update du component. <!-- .element: class="fragment" -->
 
 ---
 
@@ -31,18 +16,18 @@
 
 #### Props
 
-* Ils sont immutables
-* Sont utilisé pour passer des data aux enfants
-* Plus performants que les states pour passer des données
+* Ils sont immutables. <!-- .element: class="fragment" -->
+* Sont utilisé pour passer des data aux enfants. <!-- .element: class="fragment" -->
+* Plus performants que les states pour passer des données. <!-- .element: class="fragment" -->
 
 ---
 
 #### States
 
-* Dans l'idéal les states doivent être gérés dans le composant "Master"
-* Sont moins perfomants pour passer beaucoup de données
-* Sont mutables
-* Pour passer des états aux enfants, utilisez des props :-)
+* Dans l'idéal les states doivent être gérés dans le composant "Master". <!-- .element: class="fragment" -->
+* Sont moins perfomants pour passer beaucoup de données. <!-- .element: class="fragment" -->
+* Sont mutables. <!-- .element: class="fragment" -->
+* Pour passer des états aux enfants, utilisez des props :-) <!-- .element: class="fragment" -->
 
 ---
 
@@ -60,52 +45,75 @@
 
 ### Lifecycle
 
----
-
-* React possède des fonctions interne lui permettant de connaitre l'état du composant.
-* componentWillMount: Méthode appellée juste avant le rendu du composant (client + serveur)
-* componentDidMount: Méthode appellée au moment du rendu côté client
-* componentWillReceiveProps: Méthode appellée au moment où le composant reçoit des props,
-cette function n'est pas appellée lors du rendu inital.
-* shouldComponentUpdate: Méthode qui permet de définir si un composant doit être mis à jour ou non,
-par défaut sa valeur est forcément true, si vous voulez ne pas re-rendre le composant il faut passer le function a false.
-Dans les faits on utilise trés peu cette méthode. (1)
-* componentWillUpdate: Méthode appellée juste avant la récéption de nouvelle valeur pour les props et les states. !! setState ne fonctionne pas dans cette méthode
-* componentDidUpdate: Méthode appellée juste après que le composant ait été mis à jour.
-* componentWillUnmount: Méthode appellée juste avant qu'un composant soit retiré du DOM
-
-    1 - Par défaut React modifie le dom seulement si une modification à lieu.
-
-    Exemple, j'ai un timer, toute les secondes j'incrémente le timer et j'affiche la nouvelle valeur dans la page.
-    Toutes les secondes j'ai donc une modification du DOM qui est fait avec ma nouvelle valeur.
-    Maintenant imaginon que je prends le même code sauf qu'au lieu d'incrémenter la valeur je laisse la valeur à
-    sont état initial c'est à dire "zero". Je vais voir que le composant se met bien à jour (shouldComponentUpdate),
-    par contre si j'inspecte le dom aucune modification n'est fait.
+* componentWillMount <!-- .element: class="fragment" -->
+* componentDidMount <!-- .element: class="fragment" -->
+* componentWillReceiveProps <!-- .element: class="fragment" -->
+* shouldComponentUpdate <!-- .element: class="fragment" -->
+* componentWillUpdate <!-- .element: class="fragment" -->
+* componentDidUpdate <!-- .element: class="fragment" -->
+* componentWillUnmount <!-- .element: class="fragment" -->
 
 ---
 
-### Exemple
+### componentWillMount
+
+* Méthode appellée juste avant le rendu du composant (client + serveur)
 
 ---
 
-* Utilisation des Méthodes interne du composant pour mettre en place un timer
+### componentDidMount
+
+* Méthode appellée au moment du rendu côté client.
 
 ---
+
+### componentWillReceiveProps
+
+* Méthode appellée au moment où le composant reçoit des props, cette function n'est pas appellée lors du rendu inital.
+
+---
+
+### shouldComponentUpdate
+
+* Méthode qui permet de définir si un composant doit être mis à jour ou non.
+* Par défaut sa valeur est forcément __true__
+* Si vous voulez ne pas re-rendre le composant il faut passer le function a __false__.
+
+---
+
+### componentWillUpdate
+
+* Méthode appellée juste avant la récéption de nouvelle valeur pour les props et les states.
+* !! setState ne fonctionne pas dans cette méthode.
+
+---
+
+### componentDidUpdate
+
+* Méthode appellée juste après que le composant ait été mis à jour.
+
+---
+
+### componentWillUnmount
+
+* Méthode appellée juste avant qu'un composant soit retiré du DOM.
+
+---
+
+##### Exemple: [Counter](https://jsfiddle.net/r50shn3e/1/)
 
 ```javascript
 class Counter extends React.Component {
-   // Par défaut l'état du compteur est à Zéro
    constructor(props) {
       super(props);
       this.state = {
-        clickCount: 0
+        clickCount: 0 // Par défaut l'état du compteur est à Zéro
       };
       this._incrementClick = this._incrementClick.bind(this);
     }
-  // Au clique sur le bouton j'ajoute 1 au compteur
   _incrementClick() {
       this.setState({
-        clickCount: this.state.clickCount + 1
+        clickCount: this.state.clickCount + 1 // Au clique ajoute 1 au compteur
       });
   }
   render() {
@@ -113,23 +121,17 @@ class Counter extends React.Component {
       <div>
         {/*Ici le h2 est mis à jour avec la nouvelle valeur*/}
         <h2>{this.state.clickCount}</h2>
-        <button onClick={this._incrementClick}>
-          Add +
-        </button>
+        <button onClick={this._incrementClick}> Add +</button>
       </div>
     );
   }
 }
-
 ReactDOM.render(<Counter />, document.querySelector('#root'));
 ```
 
 ---
 
-* Voir quand les Méthodes internes sont trigger (https://jsfiddle.net/twh5fryy/6/)
-
----
-
+##### Exemple: [Méthodes internes](https://jsfiddle.net/twh5fryy/6/)
 ```javascript
 class App extends React.Component {
   constructor() {
@@ -215,10 +217,11 @@ ReactDOM.render( < App / > , document.querySelector('#root'));
 
 ### Définir les états
 
-* Nous pouvons définir des états par défaut à notre composant lors de son initialisation dans le constructor
+* Nous pouvons définir des états par défaut à notre composant lors de son initialisation dans le constructor. <!-- .element: class="fragment" -->
 
 ---
 
+##### Exemple: Définir un état dans le constructor
 ```javascript
 class Component extends React.Component {
     constructor() {
@@ -229,15 +232,17 @@ class Component extends React.Component {
     }
 }
 ```
+
 ---
 
 
 ### Modifier les états
 
-* React intègre une méthode setState pour modifier les états d'un composants
+* React intègre une méthode setState pour modifier les états d'un composant. <!-- .element: class="fragment" -->
 
 ---
 
+##### Exemple: Utilisation de setState
 ```javascript
 class Component extends React.Component {
     constructor() {
@@ -260,7 +265,7 @@ class Component extends React.Component {
 
 ### Passer des états à un composant enfant
 
-* En se reposant sur les props, il est possible de passer l'état d'un composant parent à son enfant sous forme de prop.
+* En se reposant sur les props, il est possible de passer l'état d'un composant parent à son enfant sous forme de props. <!-- .element: class="fragment" -->
 
 ---
 
@@ -287,12 +292,3 @@ class SecondComponent extends React.Component {
     }
 }
 ```
-
----
-
-### Exercice
-
-- Allez dans le dossier exercice et faites ```git checkout exercice-3```
-- ```$ npm run start```
-- Ouvrir votre navigateur à l'url : http://localhost:8080
-- Ouvrir le dossier formation-react-exercices dans votre éditeur préféré et lisez TODO.MD
