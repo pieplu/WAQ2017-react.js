@@ -172,9 +172,8 @@ class MonComposant extends React.Component {
     // pour retourner du Html
     render() {
         return (
-            // Markup qui sera retourné par le composant
             <p>Mon premier composant</p>
-        );
+        ); // Markup qui sera retourné par le composant
     }
 }
 ```
@@ -207,9 +206,8 @@ class MonComposant extends React.Component {
     // pour retourner du Html
     render() {
         return (
-            // Markup qui sera retourné par le composant
             <p>Mon premier composant</p>
-        );
+        ); // Markup qui sera retourné par le composant
     }
 }
 

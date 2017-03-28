@@ -77,7 +77,7 @@
 
 * Méthode qui permet de définir si un composant doit être mis à jour ou non.
 * Par défaut sa valeur est forcément __true__
-* Si vous voulez ne pas re-rendre le composant il faut passer le function a __false__.
+* Si vous voulez ne pas re-rendre le composant il faut passer la function a __false__.
 
 ---
 
@@ -113,7 +113,8 @@ class Counter extends React.Component {
     }
   _incrementClick() {
       this.setState({
-        clickCount: this.state.clickCount + 1 // Au clique ajoute 1 au compteur
+        clickCount: this.state.clickCount + 1
+        // Au clique ajoute 1 au compteur
       });
   }
   render() {
@@ -147,22 +148,22 @@ class App extends React.Component {
     return this._generateValue();
   }
   _generateValue() {
-  	let newValue = Math.floor(Math.random() * 100) + 1;
+    let newValue = Math.floor(Math.random() * 100) + 1;
     let values = this.state.data;
     values.push(newValue);
     this.setState({
-    	data: values
+      data: values
     });
   }
   _removeItem(event) {
-  	if (!event.target.getAttribute('data-value')) {
-    	return false;
+    if (!event.target.getAttribute('data-value')) {
+      return false;
     }
 
     let valueToRemove = event.target.getAttribute('data-value');
 
   	this.setState({
-    	data: this.state.data.filter( (item) => {
+      data: this.state.data.filter( (item) => {
         return item != valueToRemove;
       })
     });
@@ -170,38 +171,38 @@ class App extends React.Component {
   render() {
     let items = this.state.data.map((value, index) => {
       return (
-      	<Component
-        	value={value}
+        <Component
+          value={value}
           key={index}
           index={index}
           removeItem={this._removeItem} />
       );
     });
     return (
-    <div>
-      <button onClick={this._addItem}>
-      	Add one
-      </button>
-      <ul>
-      	{items.length > 0 ? items : 'Nothing to show'}
-      </ul>
-     </div>
+      <div>
+        <button onClick={this._addItem}>
+          Add one
+        </button>
+        <ul>
+          {items.length > 0 ? items : 'Nothing to show'}
+        </ul>
+      </div>
     );
   }
 }
 
 class Component extends React.Component {
-	constructor(props) {
-  	super(props);
+  constructor(props) {
+    super(props);
   }
-	componentWillMount() {
-  	console.log(`Component with index ${this.props.index} will mount.`);
+  componentWillMount() {
+   console.log(`Component with index ${this.props.index} will mount.`);
   }
   componentDidMount() {
-  	console.log(`Component with index ${this.props.index} is mount.`);
+   console.log(`Component with index ${this.props.index} is mount.`);
   }
   componentWillUnmount() {
-  	console.log(`Component with index ${this.props.index} will unmount.`);
+    console.log(`Component with index ${this.props.index} will unmount.`);
   }
   render() {
     return (
