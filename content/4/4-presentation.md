@@ -76,8 +76,28 @@
 ### shouldComponentUpdate
 
 * Méthode qui permet de définir si un composant doit être mis à jour ou non.
-* Par défaut sa valeur est forcément __true__
-* Si vous voulez ne pas re-rendre le composant il faut passer la function a __false__.
+* Par défaut la fonction renvoi forcément __true__
+* Si vous voulez ne pas re-rendre le composant il faut overider la fonction et renvoyer __false__.
+
+---
+
+##### Exemple: shouldComponentUpdate
+
+```javascript
+class Component extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return false;
+  }
+
+  render() {
+    //...
+  }
+}
+```
 
 ---
 
