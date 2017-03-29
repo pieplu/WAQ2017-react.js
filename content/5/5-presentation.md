@@ -157,7 +157,7 @@ ex: this.login.focus() va focuser le champs login. <!-- .element: class="fragmen
 
 ---
 
-#### Exemple: Récupérer les valeurs d'un formulaire
+#### Exemple: Récupérer les valeurs d'un formulaire <small>8</small>
 
 ```javascript
 
