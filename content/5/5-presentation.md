@@ -59,9 +59,9 @@ class ChildComponent extends React.Component {
 
 ### Stateless
 
-* Les composant Stateless sont de simple function, elle peuvent recevoir des props et faire un render. <!-- .element: class="fragment" -->
+* Les composant Stateless sont de simple function, elles peuvent recevoir des props et faire un render. <!-- .element: class="fragment" -->
 * On peut utiliser ce type de composant lorsqu'on parle de "Dumb composant". <!-- .element: class="fragment" -->
-* Ce sont des composants statiques dont le but est seulement d'afficher quelque chose comme le ferait Twig, Erb ou Handlebars. <!-- .element: class="fragment" -->
+* Ce sont des composants statiques dont le but est seulement de d'afficher des données. <!-- .element: class="fragment" -->
 
 ---
 
@@ -189,5 +189,5 @@ class Login extends React.Component {
 const node = document.querySelector('#root');
 ReactDOM.render(<Login />, node);
 
-// Tu peux voir le rendu sur : https://jsfiddle.net/x56t9nng/5/
+// Tu peux voir le rendu sur : https://jsfiddle.net/x56t9nng/6/
 ```
