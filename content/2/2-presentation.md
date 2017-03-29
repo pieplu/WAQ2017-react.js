@@ -50,7 +50,7 @@ render() {
 
 ---
 
-###### Iterer sur un tableau
+###### Itérer sur un tableau
 
 ```javascript
 render() {
@@ -70,8 +70,6 @@ render() {
 ###### On peut faire des conditions
 
 ```javascript
-// Ou des conditions...
-//
 render() {
     return(
         {true ? 'toto' : 'titi'}
@@ -84,8 +82,6 @@ render() {
 ###### On doit wrapper nos elements
 
 ```javascript
-// On est obligé de wrapper plusieurs éléments dans un root container
-//
 render() {
     return (
         <div>first</div>
@@ -127,7 +123,7 @@ render() {
 
 * 'Class' et 'For' sont des namespaces réservés. <!-- .element: class="fragment" -->
 * Il faut les remplacer par 'className' et 'htmlFor'. <!-- .element: class="fragment" -->
-* Les events sont attachés aux composants au format camelCase (onClick is back :) ). <!-- .element: class="fragment" -->
+* Les events sont attachés aux composants au format camelCase. <!-- .element: class="fragment" -->
 
 ---
 
@@ -187,7 +183,7 @@ class MonComposant extends React.Component {
 ### React nous permet de créer des composants mais ça s'arrête là.
 
 - Nous pouvons rendre les composants dans le DOM grâce à React-dom. <!-- .element: class="fragment" -->
-- React possède d'autre renders : <!-- .element: class="fragment" -->
+- React possède d'autres renders : <!-- .element: class="fragment" -->
 - React native (Mobile), React Blessed (App pour Terminal), React VR, React Canvas...<!-- .element: class="fragment" -->
 
 ---

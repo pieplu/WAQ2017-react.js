@@ -21,7 +21,7 @@
 
 ---
 
-##### Exemples :
+##### Exemple :
 
 ```javascript
 const toto = 'hello';
@@ -40,7 +40,7 @@ Note: Normal, on veut ré-assigner la valeur de toto dans la function sayHello
 
 ---
 
-##### Exemples :
+##### Exemple :
 
 ```javascript
 const toto = 'hello';
@@ -68,7 +68,7 @@ Note: Dans ce cas on a ré-assigner const toto mais dans le scope de la function
 
 ---
 
-##### Exemples :
+##### Exemple :
 
 ```javascript
 let toto = 'Hello';
@@ -97,7 +97,7 @@ console.log(toto2);
 ### Les classes
 
 * En fait ça ajoute aucune fonctionnalité par rapport a ES5. <!-- .element: class="fragment" -->
-* Par contre la syntaxe est bien plus facile à lire <!-- .element: class="fragment" -->
+* Par contre la syntaxe est bien plus facile à lire et à utiliser. <!-- .element: class="fragment" -->
 
 ---
 
@@ -163,7 +163,7 @@ nums.forEach( function(num) {
 });
 
 const nums = [1,2,3,4,5,6,7,8];
-nums.forEach( nun => console.log(num));
+nums.forEach( num => console.log(num));
 ```
 
 Note: Dans notre cas (React) ça nous évite d'avoir a binder this et c'est chouette.

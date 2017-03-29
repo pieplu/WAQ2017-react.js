@@ -4,9 +4,9 @@
 
 ### Les états du composants
 
-* Un composant possède des états par défault (Lifecycle). <!-- .element: class="fragment" -->
-* On peut lui définir des états par défauts et les faire évoler au fil de la vie du composant. <!-- .element: class="fragment" -->
-* La modification d'un état du composant entraine un update du component. <!-- .element: class="fragment" -->
+* Un composant possède des méthodes nous permettant de connaître son état (Lifecycle). <!-- .element: class="fragment" -->
+* On peut lui définir des états par défauts et les faire évoluer au cours de la vie du composant. <!-- .element: class="fragment" -->
+* La modification d'un état du composant entraine un re-render du component. <!-- .element: class="fragment" -->
 
 ---
 
@@ -17,7 +17,7 @@
 #### Props
 
 * Ils sont immutables. <!-- .element: class="fragment" -->
-* Sont utilisé pour passer des data aux enfants. <!-- .element: class="fragment" -->
+* Sont utilisés pour passer des datas aux enfants. <!-- .element: class="fragment" -->
 * Plus performants que les states pour passer des données. <!-- .element: class="fragment" -->
 
 ---
@@ -57,13 +57,13 @@
 
 ### componentWillMount
 
-* Méthode appellée juste avant le rendu du composant (client + serveur)
+* Méthode appellée juste avant le rendu du composant.
 
 ---
 
 ### componentDidMount
 
-* Méthode appellée au moment du rendu côté client.
+* Méthode appellée après le rendu dans le DOM.
 
 ---
 
@@ -110,7 +110,7 @@ class Component extends React.Component {
 
 ### componentDidUpdate
 
-* Méthode appellée juste après que le composant ait été mis à jour.
+* Méthode appellée juste après que le composant a été mis à jour.
 
 ---
 
