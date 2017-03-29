@@ -152,7 +152,7 @@ class Component extends React.Component {
 
 ---
 
-##### Exemple: [Méthodes internes](https://jsfiddle.net/twh5fryy/6/)
+##### Exemple: [Méthodes internes](https://jsfiddle.net/twh5fryy/6/) <small>6</small>
 ```javascript
 class App extends React.Component {
   constructor() {
