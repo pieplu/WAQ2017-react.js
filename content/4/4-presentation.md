@@ -77,7 +77,7 @@
 
 * Méthode qui permet de définir si un composant doit être mis à jour ou non.
 * Par défaut la fonction renvoi forcément __true__
-* Si vous voulez ne pas re-rendre le composant il faut overider la fonction et renvoyer __false__.
+* Si vous voulez ne pas re-rendre le composant il faut modifier la fonction et renvoyer __false__.
 
 ---
 

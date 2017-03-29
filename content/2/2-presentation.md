@@ -188,7 +188,7 @@ class MonComposant extends React.Component {
 
 ---
 
-###### Rendre un composant dans le DOM
+###### Rendre un composant dans le DOM <small>1</small>
 
 ```javascript
 import React from 'react'; // On importe React sous forme de module (cf: Appendice 1)

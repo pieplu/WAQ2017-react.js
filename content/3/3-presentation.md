@@ -36,7 +36,7 @@ class Component extends React.Component {
 
 ---
 
-#### Exemple ChildComponent
+#### Exemple ChildComponent <small>2</small>
 
 ```javascript
 // On définit notre composant enfant
@@ -209,7 +209,7 @@ to `Input`, expected `string`. Check the render method of `Form`.
 class SecondComponent extends React.Component {
   render(){
     return (
-        <p>Content of SecondComponent</p>
+        <p className="alert alert-success">Content of SecondComponent</p>
     );
   }
 }
@@ -223,7 +223,7 @@ class SecondComponent extends React.Component {
 class ThirdComponent extends React.Component {
   render() {
     return (
-      <p>Third Component</p>
+      <p className="alert alert-info">Third Component</p>
     );
   }
 }
@@ -237,7 +237,7 @@ class ThirdComponent extends React.Component {
 class FirstComponent extends React.Component {
   render() {
     return (
-      <div>
+      <div className="panel panel-primary">
         {this.props.children}
       </div>
     );
@@ -247,7 +247,7 @@ class FirstComponent extends React.Component {
 
 ---
 
-#### Exemple: App
+#### Exemple: App <small>4</small>
 
 ```javascript
 
