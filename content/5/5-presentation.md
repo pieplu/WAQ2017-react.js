@@ -57,7 +57,7 @@ class ChildComponent extends React.Component {
 
 ---
 
-### Stateless
+### Stateless <small>8</small>
 
 * Les composant Stateless sont de simple function, elles peuvent recevoir des props et faire un render. <!-- .element: class="fragment" -->
 * On peut utiliser ce type de composant lorsqu'on parle de "Dumb composant". <!-- .element: class="fragment" -->
@@ -95,7 +95,7 @@ ReactDOM.render(<App data={items} />, node);
 
 ---
 
-### Statefull
+### Statefull <small>9</small>
 
 * Les composants stateFull vont être des class qui héritent de React.Component. <!-- .element: class="fragment" -->
 * Ces composants sont dit "Statefull" car ils nous permettent de gérer l'état d'un composant (State, LifeCycle). <!-- .element: class="fragment" -->
@@ -157,7 +157,7 @@ ex: this.login.focus() va focuser le champs login. <!-- .element: class="fragmen
 
 ---
 
-#### Exemple: Récupérer les valeurs d'un formulaire <small>8</small>
+#### Exemple: Récupérer les valeurs d'un formulaire <small>10</small>
 
 ```javascript
 
