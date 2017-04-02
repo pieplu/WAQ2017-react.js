@@ -1,0 +1,34 @@
+/**
+ * SFL theme for reveal.js.
+ *
+ * No Copyright - Open Source all the things !
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #303336;
+
+$mainFont: 'Open Sans', sans-serif;
+$linkColor: #56b0c9;
+$linkColorHover: lighten( $linkColor, 20% );
+$headingFont: 'Montserrat', Impact, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.03em;
+$headingTextTransform: none;
+$selectionBackgroundColor: #56b0c9;
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
