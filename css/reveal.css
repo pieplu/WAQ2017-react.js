@@ -1371,5 +1371,45 @@ img.img--no-border {
   border: 0 !important;
   box-shadow: none !important;
   background: transparent !important;
-  width: 80% !important;
+  width: 70% !important;
   max-height: 95% !important; }
+
+img.sfl-logo {
+  width: 55%;
+  margin: 0 auto 40px auto; }
+
+img.react-logo {
+  -webkit-animation: rotation 40s linear;
+          animation: rotation 40s linear;
+  width: 30% !important; }
+
+.slide-background--es6 {
+  background: yellow; }
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); } }
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); } }
+
+.slide--es6 h1,
+.slide--es6 h2,
+.slide--es6 h3,
+.slide--es6 h4,
+.slide--es6 h5,
+.slide--es6 h6,
+.slide--es6 p,
+.slide--es6 ul,
+.slide--es6 ol,
+.slide--es6 li {
+  color: #303336 !important; }

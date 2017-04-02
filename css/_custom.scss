@@ -10,6 +10,40 @@ img.img--no-border {
     border: 0 !important;
     box-shadow: none !important;
     background: transparent !important;
-    width: 80% !important;
+    width: 70% !important;
     max-height: 95% !important;
+}
+
+img.sfl-logo {
+    width: 55%;
+    margin: 0 auto 40px auto;
+}
+
+img.react-logo {
+    animation: rotation 40s linear;
+    width: 30% !important;
+}
+
+.slide-background--es6 {
+    background: yellow;
+}
+
+@keyframes rotation {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(-360deg) }
+}
+
+.slide--es6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    li {
+        color: #303336 !important;
+    }
 }

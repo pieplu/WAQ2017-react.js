@@ -127,6 +127,7 @@ render() {
 
 ---
 
+###### Exemple
 ```javascript
 render() {
     return (
