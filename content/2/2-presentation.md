@@ -31,7 +31,7 @@ var app = React.createElement(
 
 ---
 
-#### Presentation
+#### Présentation
 
 ---
 
@@ -43,6 +43,7 @@ render() {
     return (
         <p>
             {myVariable} // => 8
+            {4+4} // => 8
         </p>
     );
 }
@@ -57,9 +58,9 @@ render() {
     const names = ['Joe', 'Bob', 'Tom','Phil'];
     return(
         <ul>
-        {names.map( (name, key) => {
-            return <li key={key}>{name}</li>
-        })}
+            {names.map( (name, key) => {
+                return <li key={key}>{name}</li>
+            })}
         </ul>
     )
 }
@@ -79,7 +80,7 @@ render() {
 
 ---
 
-###### On doit wrapper nos elements
+###### On doit wrapper nos éléments
 
 ```javascript
 render() {
@@ -88,6 +89,9 @@ render() {
         <div>second</div>
     );
 }
+// Uncaught SyntaxError: embedded: Adjacent JSX elements must be wrapped
+// in an enclosing tag
+
 render() {
     return (
         <div>
@@ -146,7 +150,7 @@ render() {
 
 ### Qu'est ce qu'un composant
 
-- On peut voir les composants comme des fonctions qui recoivent des 'props' et des 'states' et qui affichent du HTML. <!-- .element: class="fragment" -->
+- On peut voir les composants comme des fonctions qui recoivent des données en paramètres et qui affichent du HTML. <!-- .element: class="fragment" -->
 - Dans l'idée ce sont des petits modules qu'on peut facilement réutiliser. <!-- .element: class="fragment" -->
 - Depuis React 14 on distingue deux types de composants: Stateless et Statefull. <!-- .element: class="fragment" -->
 
@@ -162,10 +166,10 @@ render() {
 import React from 'react'; // On importe React sous forme de module
 
 // Maintenant que React est importé on va créer une classe
-// On va l'appeller 'MonComposant'
+// On va l'appeler 'MonComposant'
 // Cette classe va hériter de la classe React.Component
 class MonComposant extends React.Component {
-    // On va utiliser la function 'render'
+    // On va utiliser la fonction 'render'
     // pour retourner du Html
     render() {
         return (
@@ -196,10 +200,10 @@ import React from 'react'; // On importe React sous forme de module (cf: Appendi
 import ReactDOM from 'react-dom';
 
 // Maintenant que React est importé on va créer une classe
-// On va l'appeller 'MonComposant'
+// On va l'appeler 'MonComposant'
 // Cette classe va hériter de la classe React.Component
 class MonComposant extends React.Component {
-    // On va utiliser la function 'render'
+    // On va utiliser la fonction 'render'
     // pour retourner du Html
     render() {
         return (
@@ -208,9 +212,9 @@ class MonComposant extends React.Component {
     }
 }
 
-// On vient targeter id dans laquelle on veut rendre le composant
+// On vient cibler l'id dans laquelle on veut rendre le composant
 let root = document.querySelector('#root');
-// On untilise la function render de ReactDOM pour venir lui indiquer quoi faire
+// On untilise la fonction render de ReactDOM pour venir lui indiquer quoi faire
 // ici on lui dit 'Prends MonComposant et affiche le moi dans #root'
 
 ReactDOM.render(<MonComposant />, root);
