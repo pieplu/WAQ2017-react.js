@@ -182,7 +182,12 @@ class App extends React.Component {
     );
   }
 }
+```
 
+---
+
+##### Exemple: Composants 'Statefull' <small style="vertical-align:middle;">(suite)</small>
+```javascript
 class Item extends React.Component {
   constructor(props) {
     super(props);
@@ -198,7 +203,6 @@ class Item extends React.Component {
 const node = document.querySelector('#root');
 ReactDOM.render(<App />, node);
 
-// Tu peux voir le rendu ici : https://jsfiddle.net/23syfzpg/3/
 ```
 
 ---
