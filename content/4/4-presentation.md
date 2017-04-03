@@ -2,11 +2,11 @@
 
 ---
 
-### Les états du composants
+### Les états du composant
 
-* Un composant possède des méthodes nous permettant de connaître son état (Lifecycle). <!-- .element: class="fragment" -->
-* On peut lui définir des états par défauts et les faire évoluer au cours de la vie du composant. <!-- .element: class="fragment" -->
-* La modification d'un état du composant entraine un re-render du component. <!-- .element: class="fragment" -->
+* Un composant possède des méthodes qui nous permettent de connaître son état (Lifecycle). <!-- .element: class="fragment" -->
+* Par défaut, nous pouvous lui définir ses propres états. <!-- .element: class="fragment" -->
+* La modification d'un état du composant entraîne un re-render du composant. <!-- .element: class="fragment" -->
 
 ---
 
@@ -16,18 +16,16 @@
 
 #### Props
 
+* Ils sont utilisés pour passer des données aux enfants. <!-- .element: class="fragment" -->
 * Ils sont immutables. <!-- .element: class="fragment" -->
-* Sont utilisés pour passer des datas aux enfants. <!-- .element: class="fragment" -->
-* Plus performants que les states pour passer des données. <!-- .element: class="fragment" -->
+* Ils sont plus performants que les états pour passer des données. <!-- .element: class="fragment" -->
 
 ---
 
 #### States
 
-* Dans l'idéal les states doivent être gérés dans le composant "Master". <!-- .element: class="fragment" -->
-* Sont moins perfomants pour passer beaucoup de données. <!-- .element: class="fragment" -->
-* Sont mutables. <!-- .element: class="fragment" -->
-* Pour passer des états aux enfants, utilisez des props :-) <!-- .element: class="fragment" -->
+* Ils sont mutables. <!-- .element: class="fragment" -->
+* Ils sont moins perfomants pour passer beaucoup de données. <!-- .element: class="fragment" -->
 
 ---
 
@@ -45,7 +43,7 @@ class Counter extends React.Component {
   _incrementClick() {
       this.setState({
         clickCount: this.state.clickCount + 1
-        // Au clique ajoute 1 au compteur
+        // Au clique on ajoute 1 au compteur
       });
   }
   render() {
@@ -67,11 +65,12 @@ ReactDOM.render(<Counter />, document.querySelector('#root'));
 
 ---
 
-* Dans la plupart des cas les composants s'organise comme ça:
+* Dans la plupart des cas les composants s'organisent ainsi:
 
-    * On a un composant parent qui souvent définit des états.
-    * Les états sont passés en props aux enfants (au besoin)
-    * Les enfants, sauf cas spécifiques ont trés peu besoin de gérer les états.
+    * Un composant parent, qui définit des états. <!-- .element: class="fragment" -->
+    * Ces états sont passés en props aux enfants.<!-- .element: class="fragment" -->
+    * Les enfants récupèrent les états.<!-- .element: class="fragment" -->
+    * Les enfants ont très peu besoin de gérer les états (sauf cas spécifiques).<!-- .element: class="fragment" -->
 
 ---
 
@@ -89,27 +88,28 @@ ReactDOM.render(<Counter />, document.querySelector('#root'));
 
 ### componentWillMount
 
-* Méthode appellée juste avant le rendu du composant.
+* Méthode appelée avant le rendu du composant.
 
 ---
 
 ### componentDidMount
 
-* Méthode appellée après le rendu dans le DOM.
+* Méthode appelée après le rendu du composant.
 
 ---
 
 ### componentWillReceiveProps
 
-* Méthode appellée au moment où le composant reçoit des props, cette function n'est pas appellée lors du rendu inital.
+* Méthode appelée lorsque le composant reçoit des 'props'.
+* Cette fonction n'est pas appelée lors du rendu inital.
 
 ---
 
 ### shouldComponentUpdate
 
 * Méthode qui permet de définir si un composant doit être mis à jour ou non.
-* Par défaut la fonction renvoi forcément __true__
-* Si vous voulez ne pas re-rendre le composant il faut modifier la fonction et renvoyer __false__.
+* Par défaut la fonction retourne __true__.
+* Pour ne pas re-rendre le composant, il faut retourner __false__.
 
 ---
 
@@ -135,20 +135,20 @@ class Component extends React.Component {
 
 ### componentWillUpdate
 
-* Méthode appellée juste avant la récéption de nouvelle valeur pour les props et les states.
-* !! setState ne fonctionne pas dans cette méthode.
+* Méthode appelée lorsque le composant reçoit de nouvelles valeurs.
+* !! 'setState' ne fonctionne pas dans cette méthode.
 
 ---
 
 ### componentDidUpdate
 
-* Méthode appellée juste après que le composant a été mis à jour.
+* Méthode appelée après que le composant ait été mis à jour.
 
 ---
 
 ### componentWillUnmount
 
-* Méthode appellée juste avant qu'un composant soit retiré du DOM.
+* Méthode appelée avant que le composant soit retiré du DOM.
 
 ---
 
@@ -238,7 +238,7 @@ ReactDOM.render( < App / > , document.querySelector('#root'));
 
 ### Définir les états
 
-* Nous pouvons définir des états par défaut à notre composant lors de son initialisation dans le constructor. <!-- .element: class="fragment" -->
+* Lors de l'initialisation du composant, nous pouvons définir des états dans son constructor. <!-- .element: class="fragment" -->
 
 ---
 
@@ -259,11 +259,11 @@ class Component extends React.Component {
 
 ### Modifier les états
 
-* React intègre une méthode setState pour modifier les états d'un composant. <!-- .element: class="fragment" -->
+* React possède une méthode 'setState' pour modifier les états d'un composant. <!-- .element: class="fragment" -->
 
 ---
 
-##### Exemple: Utilisation de setState
+##### Exemple: Utilisation de 'setState'
 ```javascript
 class Component extends React.Component {
     constructor() {
@@ -272,7 +272,7 @@ class Component extends React.Component {
             firstState: 'value'
         };
     }
-    // Imaginons une function déclenché au clique
+    // Imaginons une fonction déclenchée au clique
     _handleClick() {
         // On définit une nouvelle valeur pour l'état 'firstState'
         this.setState({
@@ -286,10 +286,11 @@ class Component extends React.Component {
 
 ### Passer des états à un composant enfant
 
-* En se reposant sur les props, il est possible de passer l'état d'un composant parent à son enfant sous forme de props. <!-- .element: class="fragment" -->
+* Sous forme de 'props', il est possible de passer l'état d'un composant parent à son enfant. <!-- .element: class="fragment" -->
 
 ---
 
+##### Exemple: 'State' parent -> enfant
 ```javascript
 class FirstComponent extends React.Component {
     constructor() {

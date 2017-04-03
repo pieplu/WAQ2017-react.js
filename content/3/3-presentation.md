@@ -1,13 +1,13 @@
-## Les props
+## Les 'props'
 
 ---
 
-### Qu'est ce que les "Props"
+### Qu'est ce que les 'Props' ?
 
 * Props est le diminutif de 'properties'. <!-- .element: class="fragment" -->
 * Les props sont un moyen de passer des données d'un composant à un autre. <!-- .element: class="fragment" -->
-* Ils s'écrivent à la manière des "data-attributes" en html. <!-- .element: class="fragment" -->
-* On peut leur faire passer tout type de données (String, Array, Objects, function...). <!-- .element: class="fragment" -->
+* Ils s'écrivent à la manière des "data-attributes" en Html. <!-- .element: class="fragment" -->
+* On peut leur faire passer plusieurs types de données (String, Array, Objects, function...). <!-- .element: class="fragment" -->
 * Les props sont immutables. <!-- .element: class="fragment" -->
 
 ---
@@ -15,7 +15,7 @@
 #### Exemple
 
 ```javascript
-// On définit un component au nom original de Component
+// On définit un composant au nom original de Component
 // Par défaut on initialise le nom et l'url de l'image
 
 class Component extends React.Component {
@@ -40,7 +40,7 @@ class Component extends React.Component {
 
 ```javascript
 // On définit notre composant enfant
-// et on lui demande d'afficher les valeurs passés en props
+// et on lui demande d'afficher les valeurs passées en 'props'
 
 class ChildComponent extends React.Component {
     render() {
@@ -57,10 +57,10 @@ class ChildComponent extends React.Component {
 
 ---
 
-### Les propsTypes
+### Les 'propsTypes'
 
-* Permet de vérifier les props. <!-- .element: class="fragment" -->
-* Documente nos composants. <!-- .element: class="fragment" -->
+* Ils permettent de vérifier le type des 'props'. <!-- .element: class="fragment" -->
+* Ils documentent nos composants. <!-- .element: class="fragment" -->
 
 ---
 
@@ -106,12 +106,12 @@ class Form extends React.Component {
 
 ---
 
-* Notre composant est réutilisable c'est chouette !
-* Cependant si dans name je lui passe une fonction... <!-- .element: class="fragment" -->
+* Notre composant est réutilisable, c'est chouette !
+* Cependant si dans 'name' je lui passe une fonction... <!-- .element: class="fragment" -->
 
 ---
 
-##### Output de la console du navigateur
+##### Sortie de la console du navigateur
 ```html
 <input data-reactroot=from"" type="text" name="function () {
             window.runnerWindow.proxyConsole.log('focus');
@@ -120,8 +120,11 @@ class Form extends React.Component {
 
 ---
 
-* Ça va beaucoup moins bien fonctionner là.
-* C'est là où les propsTypes vont rentrer en jeux. <!-- .element: class="fragment" -->
+* Et là, c'est le drame !
+
+---
+
+* C'est à ce moment, où les 'propsTypes' vont rentrer en jeux.
 
 ---
 
@@ -170,11 +173,7 @@ class Form extends React.Component {
 
 ---
 
-* Maintenant en ayant définit des PropTypes si je reload ma page.
-
----
-
-#### Exemple: Sortie de console du composant
+#### Exemple: sortie de console du composant
 ```javascript
 Warning: Failed propType: Invalid prop `name` of type `function` supplied
 to `Input`, expected `string`. Check the render method of `Form`.
@@ -183,17 +182,17 @@ to `Input`, expected `string`. Check the render method of `Form`.
 ---
 
 * React nous dit clairement ce qui ne va pas et où le corriger.
-* Un debuggage facile en cas d'erreur. <!-- .element: class="fragment" -->
-* Une documentation du code. <!-- .element: class="fragment" -->
+* Il permet un debuggage facile en cas d'erreur. <!-- .element: class="fragment" -->
+* Il documente notre code. <!-- .element: class="fragment" -->
 
 ---
 
 ### Le cas de children
 
 * React intégre par défaut un props 'children'. <!-- .element: class="fragment" -->
-* Ce props children retourne tout ce qui est passé entre la balise ouvrante et fermante du component. <!-- .element: class="fragment" -->
-* props.children peut-être à la fois un tableau ou un objet. <!-- .element: class="fragment" -->
-* Si on lui passe plusieurs components, ce sera un Array, sinon ce sera un objet. <!-- .element: class="fragment" -->
+* Ce props 'children' retourne tout ce qui est mis entre la balise ouvrante et fermante du composant. <!-- .element: class="fragment" -->
+* 'props.children' peut-être à la fois un tableau ou un objet. <!-- .element: class="fragment" -->
+* Si on lui passe plusieurs composants, ce sera un Array, sinon ce sera un objet. <!-- .element: class="fragment" -->
 
 ---
 

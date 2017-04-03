@@ -15,7 +15,7 @@
 ---
 
 ```javascript
-// Exemple pris de la doc react
+// Exemple pris de la documentation de React.js
 // source: https://facebook.github.io/react/docs/jsx-in-depth.html#the-transform
 
 // Input (JSX):
@@ -68,7 +68,7 @@ render() {
 
 ---
 
-###### On peut faire des conditions
+###### Faire des conditions
 
 ```javascript
 render() {
@@ -80,7 +80,7 @@ render() {
 
 ---
 
-###### On doit wrapper nos éléments
+###### Wrapper nos éléments
 
 ```javascript
 render() {
@@ -104,11 +104,11 @@ render() {
 
 ---
 
-### JSX: Les petites choses à savoir
+### JSX:<br/> Les petites choses à savoir
 
 ---
 
-###### Vous voulez ajouter une classe donc vous faites
+###### Pour ajouter une classe, vous faites...
 
 ```javascript
 render() {
@@ -125,9 +125,8 @@ render() {
 
 ### Pourquoi ?
 
-* 'Class' et 'For' sont des namespaces réservés. <!-- .element: class="fragment" -->
+* 'Class' et 'For' sont des 'namespaces' réservés. <!-- .element: class="fragment" -->
 * Il faut les remplacer par 'className' et 'htmlFor'. <!-- .element: class="fragment" -->
-* Les events sont attachés aux composants au format camelCase. <!-- .element: class="fragment" -->
 
 ---
 
@@ -148,11 +147,37 @@ render() {
 
 ---
 
-### Qu'est ce qu'un composant
+### Les événements
 
-- On peut voir les composants comme des fonctions qui recoivent des données en paramètres et qui affichent du HTML. <!-- .element: class="fragment" -->
-- Dans l'idée ce sont des petits modules qu'on peut facilement réutiliser. <!-- .element: class="fragment" -->
-- Depuis React 14 on distingue deux types de composants: Stateless et Statefull. <!-- .element: class="fragment" -->
+* Les événements sont attachés aux composants sous le format 'camelCase'. <!-- .element: class="fragment" -->
+
+---
+
+###### Exemple
+```javascript
+render() {
+    return (
+        <div className="form-group">
+            <label htmlFor="name">Nom</label>
+            <input
+                className="input"
+                id="name"
+                onFocus={this._handleFocus}
+                onChange={this._handleChange} />
+            <button onClick={this._handleClick}>Submit</button>
+        </div>
+    );
+}
+```
+
+---
+
+### Qu'est ce qu'un composant ?
+
+- On peut voir un composant comme une fonction. <!-- .element: class="fragment" -->
+- Il reçoit des données en paramètre et retourne du HTML. <!-- .element: class="fragment" -->
+- Ce sont de petits modules facilement réutilisables. <!-- .element: class="fragment" -->
+- Depuis React 14, on distingue deux types de composants: Stateless et Statefull. <!-- .element: class="fragment" -->
 
 ---
 

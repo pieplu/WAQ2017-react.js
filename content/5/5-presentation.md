@@ -9,12 +9,7 @@
 
 ---
 
-#### Exemple
-
-* Souvenez vous de l'exemple du Elmo... <!-- .element: class="fragment" -->
-
----
-
+##### Exemple: Communication parent -> enfant
 ```javascript
 class Component extends React.Component {
     constructor(props) {
@@ -32,7 +27,7 @@ class Component extends React.Component {
     }
 }
 
-// Et maintenant quand on clique sur Elmo une alert nous dit 'Yohooo'
+// Et maintenant quand on clique sur Elmo un alert() nous dit 'Yohooo'
 class ChildComponent extends React.Component {
     render() {
         return (
@@ -53,18 +48,20 @@ class ChildComponent extends React.Component {
 
 ---
 
-### Point rapide composant Statefull et Stateless
+### Différence entre composant Statefull et Stateless
 
 ---
 
 ### Stateless <small>8</small>
 
-* Les composant Stateless sont de simple function, elles peuvent recevoir des props et faire un render. <!-- .element: class="fragment" -->
-* On peut utiliser ce type de composant lorsqu'on parle de "Dumb composant". <!-- .element: class="fragment" -->
-* Ce sont des composants statiques dont le but est seulement de d'afficher des données. <!-- .element: class="fragment" -->
+* Les composants 'Stateless' sont de simples fonctions. <!-- .element: class="fragment" -->
+* Elles peuvent recevoir des 'props' et faire un 'render'. <!-- .element: class="fragment" -->
+* Ce type de composant est aussi appelé 'Dumb component'. <!-- .element: class="fragment" -->
+* Ce sont des composants statiques, qui ne possédent pas d'états. <!-- .element: class="fragment" -->
 
 ---
 
+##### Exemple: Composants 'Stateless'
 ```javascript
 const items = [
 	{id: '1e91b13a-cdb2-4268-bc43-da5b08785ed3', content: 'First item'},
@@ -97,11 +94,12 @@ ReactDOM.render(<App data={items} />, node);
 
 ### Statefull <small>9</small>
 
-* Les composants stateFull vont être des class qui héritent de React.Component. <!-- .element: class="fragment" -->
-* Ces composants sont dit "Statefull" car ils nous permettent de gérer l'état d'un composant (State, LifeCycle). <!-- .element: class="fragment" -->
+* Les composants 'statefull' sont des classes qui héritent de React.Component. <!-- .element: class="fragment" -->
+* Ces composants sont 'Statefull' car ils permettent la gestion des états d'un composant (State, LifeCycle). <!-- .element: class="fragment" -->
 
 ---
 
+##### Exemple: Composants 'Statefull'
 ```javascript
 const items = [
     {id: '1e91b13a-cdb2-4268-bc43-da5b08785ed3', content: 'First item'},
@@ -151,9 +149,8 @@ ReactDOM.render(<App />, node);
 
 ### L'attribut Ref
 
-* L'attribut ref nous permet de venir récupérer le DOM rendu par un composant. <!-- .element: class="fragment" -->
-* Comme il nous renvoit un élément du DOM on peut le manipuler avec l'API DOM,
-ex: this.login.focus() va focuser le champs login. <!-- .element: class="fragment" -->
+* L'attribut ref nous permet de récupérer le rendu DOM d'un composant. <!-- .element: class="fragment" -->
+* Il peut être manipulé avec l'API DOM.<br/>Ex: this.login.focus() va 'focuser' le champs login. <!-- .element: class="fragment" -->
 
 ---
 
