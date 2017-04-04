@@ -158,7 +158,6 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      displayTimer: true,
       data: []
     };
     this._addItem = this._addItem.bind(this);
