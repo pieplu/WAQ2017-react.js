@@ -1,4 +1,4 @@
-## C'est quoi React.js ?
+### C'est quoi React.js ?
 
 - Une bibliothèque JavaScript. <!-- .element: class="fragment" -->
 
@@ -10,7 +10,7 @@
 
 ### Historique
 
-- Crée par Jordan Walke (Facebook) ~ 2010/2011. <!-- .element: class="fragment" -->
+- Crée par Jordan Walke (Facebook) fin 2011. <!-- .element: class="fragment" -->
 
 - Utilisée sur Facebook (2011) puis Instagram (Pete Hunt). <!-- .element: class="fragment" -->
 
@@ -38,10 +38,20 @@ React a été crée dans le but de réaliser des applications avec des données 
 
 ### Propositions
 
-- Abstraire son interface sous forme de composants. <!-- .element: class="fragment" -->
+- Abstraire son interface sous forme de composants réutilisables. <!-- .element: class="fragment" -->
 
 - Virtual DOM. <!-- .element: class="fragment" -->
 
 - One-way data flow. <!-- .element: class="fragment" -->
 
 - JSX. <!-- .element: class="fragment" -->
+
+---
+
+### En résumé
+
+- React.js est une bibliothèque JavaScript. <!-- .element: class="fragment" -->
+- La partie 'vue' de notre application. <!-- .element: class="fragment" -->
+- Open-source. <!-- .element: class="fragment" -->
+- Virtual DOM pour la mise à jour du DOM. <!-- .element: class="fragment" -->
+- JSX pour écrire nos composants. <!-- .element: class="fragment" -->

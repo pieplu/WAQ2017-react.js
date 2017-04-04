@@ -2,6 +2,16 @@
 
 ---
 
+### De quoi va-t-on parler ?
+
+- Les états du composants. <!-- .element: class="fragment" -->
+- Props et State. <!-- .element: class="fragment" -->
+- Lifecycle. <!-- .element: class="fragment" -->
+- Définir et modifier des états. <!-- .element: class="fragment" -->
+- Passer des états à un composant enfant. <!-- .element: class="fragment" -->
+
+---
+
 ### Les états du composant
 
 * Un composant possède des méthodes qui nous permettent de connaître son état (Lifecycle). <!-- .element: class="fragment" -->
@@ -315,3 +325,12 @@ class SecondComponent extends React.Component {
     }
 }
 ```
+
+---
+
+### En résumé
+
+- Les états sont définits dans le 'constructor' et modifiable avec 'setState'. <!-- .element: class="fragment" -->
+- La modification d'un état, entraine un 're-render' du composant. <!-- .element: class="fragment" -->
+- Un composant possèdent des méthode permettant de connaitre ses états. <!-- .element: class="fragment" -->
+- Les états peuvent être partager entre composant grâce aux 'props'. <!-- .element: class="fragment" -->

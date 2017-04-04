@@ -2,6 +2,14 @@
 
 ---
 
+### De quoi va-t-on parler ?
+
+- Qu'est ce que les 'Props'. <!-- .element: class="fragment" -->
+- Les propsTypes. <!-- .element: class="fragment" -->
+- Le cas de children. <!-- .element: class="fragment" -->
+
+---
+
 ### Qu'est-ce que les 'Props' ?
 
 * Props est le diminutif de 'properties'. <!-- .element: class="fragment" -->
@@ -264,3 +272,11 @@ class App extends React.Component {
 const root = document.querySelector('#root');
 ReactDOM.render(<App />, root);
 ```
+
+---
+
+### En résumé
+
+- Les 'props' sont utilisés pour faire passer des données entre composants. <!-- .element: class="fragment" -->
+- Les 'props' acceptent plusieurs type de données. <!-- .element: class="fragment" -->
+- Les 'propsType' permettent de spécifier le typage de nos 'props'. <!-- .element: class="fragment" -->

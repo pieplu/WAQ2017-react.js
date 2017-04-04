@@ -2,6 +2,15 @@
 
 ---
 
+### De quoi va-t-on parler ?
+
+- JSX. <!-- .element: class="fragment" -->
+- Qu'est ce qu'un composant. <!-- .element: class="fragment" -->
+- Définir un composant. <!-- .element: class="fragment" -->
+- Rendre le composant dans la page. <!-- .element: class="fragment" -->
+
+---
+
 ### JSX
 
 - JSX est une extension de la syntaxe de JavaScript. <!-- .element: class="fragment" -->
@@ -244,3 +253,13 @@ let root = document.querySelector('#root');
 
 ReactDOM.render(<MonComposant />, root);
 ```
+
+---
+
+### En résumé
+
+- JSX nous permet de générer des objets JavaScript avec une notation Html. <!-- .element: class="fragment" -->
+- Remplacez 'classe' par 'className' et 'for' par 'htmlFor'. <!-- .element: class="fragment" -->
+- Les évenements sont ajoutés au format 'camelCase' (onClick, onChange etc.). <!-- .element: class="fragment" -->
+- Le rendu du Html dans un composant se faire dans la méthode 'render()'. <!-- .element: class="fragment" -->
+- Pour rendre un composant dans le DOM il faut utiliser React-DOM. <!-- .element: class="fragment" -->
