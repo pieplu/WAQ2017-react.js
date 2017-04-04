@@ -268,6 +268,7 @@ class Component extends React.Component {
 ```javascript
 class Component extends React.Component {
     constructor() {
+        super();
         // Définir un état à l'initialisation du composant
         this.state = {
             firstState: 'value'
