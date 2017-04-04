@@ -2,6 +2,16 @@
 
 ---
 
+### De quoi va-t-on parler ?
+
+- Communication parent vers enfant. <!-- .element: class="fragment" -->
+- Communication enfant vers parent. <!-- .element: class="fragment" -->
+- Point rapide composant Statefull et Stateless. <!-- .element: class="fragment" -->
+- Définir et modifier des états. <!-- .element: class="fragment" -->
+- L'attribut Ref. <!-- .element: class="fragment" -->
+
+---
+
 ### Communication parent vers enfant
 
 * C'est le cas le plus simple et le plus courant. <!-- .element: class="fragment" -->
