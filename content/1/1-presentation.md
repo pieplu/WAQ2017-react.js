@@ -2,7 +2,7 @@
 
 - Une bibliothèque JavaScript. <!-- .element: class="fragment" -->
 
-- Elle permet de gérer son UI sous forme de composant. <!-- .element: class="fragment" -->
+- Permet de gérer son UI sous forme de composant. <!-- .element: class="fragment" -->
 
 - Pour résumer : c'est le V de MVC. <!-- .element: class="fragment" -->
 

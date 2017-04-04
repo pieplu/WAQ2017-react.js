@@ -210,7 +210,7 @@ ReactDOM.render(<App />, node);
 ### L'attribut Ref
 
 * L'attribut ref nous permet de récupérer le rendu DOM d'un composant. <!-- .element: class="fragment" -->
-* Il peut être manipulé avec l'API DOM.<br/>Ex: this.login.focus() va 'focuser' le champs login. <!-- .element: class="fragment" -->
+* Il peut être manipulé avec l'API DOM.<br/>Ex: this.login.focus() va 'focuser' le champ login. <!-- .element: class="fragment" -->
 
 ---
 

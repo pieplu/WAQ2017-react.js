@@ -2,12 +2,12 @@
 
 ---
 
-### Qu'est ce que les 'Props' ?
+### Qu'est-ce que les 'Props' ?
 
 * Props est le diminutif de 'properties'. <!-- .element: class="fragment" -->
 * Les props sont un moyen de passer des données d'un composant à un autre. <!-- .element: class="fragment" -->
 * Ils s'écrivent à la manière des "data-attributes" en Html. <!-- .element: class="fragment" -->
-* On peut leur faire passer plusieurs types de données (String, Array, Objects, function...). <!-- .element: class="fragment" -->
+* On peut leur faire passer plusieurs types de données (String, Array, Objects, Function...). <!-- .element: class="fragment" -->
 * Les props sont immutables. <!-- .element: class="fragment" -->
 
 ---
@@ -107,7 +107,7 @@ class Form extends React.Component {
 ---
 
 * Notre composant est réutilisable, c'est chouette !
-* Cependant si dans 'name' je lui passe une fonction... <!-- .element: class="fragment" -->
+* Cependant, si dans 'name' je lui passe une fonction... <!-- .element: class="fragment" -->
 
 ---
 
@@ -189,9 +189,9 @@ to `Input`, expected `string`. Check the render method of `Form`.
 
 ### Le cas de children
 
-* React intégre par défaut un props 'children'. <!-- .element: class="fragment" -->
+* React intègre par défaut un props 'children'. <!-- .element: class="fragment" -->
 * Ce props 'children' retourne tout ce qui est mis entre la balise ouvrante et fermante du composant. <!-- .element: class="fragment" -->
-* 'props.children' peut-être à la fois un tableau ou un objet. <!-- .element: class="fragment" -->
+* 'props.children' peut être à la fois un tableau ou un objet. <!-- .element: class="fragment" -->
 * Si on lui passe plusieurs composants, ce sera un Array, sinon ce sera un objet. <!-- .element: class="fragment" -->
 
 ---

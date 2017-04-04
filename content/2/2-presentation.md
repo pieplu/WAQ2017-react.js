@@ -10,7 +10,7 @@
 
 ---
 
-#### JSX V.S Plain JS
+#### JSX VS Plain JS
 
 ---
 
@@ -35,7 +35,7 @@ var app = React.createElement(
 
 ---
 
-###### Exécuter du JavaScript parmis le JSX
+###### Exécuter du JavaScript parmi le JSX
 
 ```javascript
 render() {
@@ -172,7 +172,7 @@ render() {
 
 ---
 
-### Qu'est ce qu'un composant ?
+### Qu'est-ce qu'un composant ?
 
 - On peut voir un composant comme une fonction. <!-- .element: class="fragment" -->
 - Il reçoit des données en paramètre et retourne du HTML. <!-- .element: class="fragment" -->
@@ -239,8 +239,8 @@ class MonComposant extends React.Component {
 
 // On vient cibler l'id dans laquelle on veut rendre le composant
 let root = document.querySelector('#root');
-// On untilise la fonction render de ReactDOM pour venir lui indiquer quoi faire
-// ici on lui dit 'Prends MonComposant et affiche le moi dans #root'
+// On utilise la fonction render de ReactDOM pour venir lui indiquer quoi faire
+// ici on lui dit 'Prends MonComposant et affiche-le moi dans #root'
 
 ReactDOM.render(<MonComposant />, root);
 ```

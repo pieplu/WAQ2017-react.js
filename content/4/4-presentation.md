@@ -1,4 +1,4 @@
-## Les 'states'
+## Les 'state'
 
 ---
 
@@ -22,7 +22,7 @@
 
 ---
 
-#### States
+#### State
 
 * Ils sont mutables. <!-- .element: class="fragment" -->
 * Ils sont moins perfomants pour passer beaucoup de données. <!-- .element: class="fragment" -->
@@ -101,7 +101,7 @@ ReactDOM.render(<Counter />, document.querySelector('#root'));
 ### componentWillReceiveProps
 
 * Méthode appelée lorsque le composant reçoit des 'props'.
-* Cette fonction n'est pas appelée lors du rendu inital.
+* Cette fonction n'est pas appelée lors du rendu initial.
 
 ---
 
@@ -246,6 +246,7 @@ ReactDOM.render( < App / > , document.querySelector('#root'));
 ```javascript
 class Component extends React.Component {
     constructor() {
+        super();
         // Définir un état à l'initialisation du composant
         this.state = {
             firstState: 'value'
@@ -267,12 +268,13 @@ class Component extends React.Component {
 ```javascript
 class Component extends React.Component {
     constructor() {
+        super();
         // Définir un état à l'initialisation du composant
         this.state = {
             firstState: 'value'
         };
     }
-    // Imaginons une fonction déclenchée au clique
+    // Imaginons une fonction déclenchée au clic
     _handleClick() {
         // On définit une nouvelle valeur pour l'état 'firstState'
         this.setState({
