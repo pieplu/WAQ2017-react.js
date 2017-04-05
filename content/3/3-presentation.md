@@ -183,8 +183,7 @@ to `Input`, expected `string`. Check the render method of `Form`.
 
 ---
 
-
-* React intègre par défaut un props 'children'. <!-- .element: class="fragment" -->
+* React intègre par défaut un props 'children'.
 * Ce props 'children' retourne tout ce qui est mis entre la balise ouvrante et fermante du composant. <!-- .element: class="fragment" -->
 * 'props.children' peut être à la fois un tableau ou un objet. <!-- .element: class="fragment" -->
 * Si on lui passe plusieurs composants, ce sera un Array, sinon ce sera un objet. <!-- .element: class="fragment" -->
