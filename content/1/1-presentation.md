@@ -10,9 +10,9 @@
 
 ### Historique
 
-- Crée par Jordan Walke (Facebook) fin 2011. <!-- .element: class="fragment" -->
+- Crée par Jordan Walke (Facebook) 2011. <!-- .element: class="fragment" -->
 
-- Utilisée sur Facebook (2011) puis Instagram (Pete Hunt). <!-- .element: class="fragment" -->
+- Utilisée sur Facebook puis Instagram. <!-- .element: class="fragment" -->
 
 - Rendue Open-Source en 2013. <!-- .element: class="fragment" -->
 
@@ -31,7 +31,7 @@ React a été crée dans le but de réaliser des applications avec des données 
 ### Constats
 
 - Maintenir une application avec des données qui changent tout le temps :
-    - C'est compliqué (Codebase énorme, maintenabilité du code compliqué) <!-- .element: class="fragment" -->
+    - C'est compliqué <!-- .element: class="fragment" -->
     - Manipuler le DOM à outrance, ça coûte cher en performance. <!-- .element: class="fragment" -->
 
 ---
