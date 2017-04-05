@@ -1380,8 +1380,8 @@ img.sfl-logo {
   opacity: 0.7; }
 
 img.react-logo {
-  -webkit-animation: rotation 40s linear;
-          animation: rotation 40s linear;
+  -webkit-animation: rotation 40s linear infinite;
+          animation: rotation 40s linear infinite;
   width: 30% !important; }
 
 .slide-background--es6 {

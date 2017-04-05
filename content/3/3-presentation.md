@@ -65,6 +65,37 @@ class ChildComponent extends React.Component {
 
 ---
 
+### 'Props' par défaut
+
+- Il est possible de définir des 'props' par défaut grâce à 'defaultProps'.<!-- .element: class="fragment" -->
+
+---
+
+#### Exemple defaultProps
+
+```javascript
+// Maintenant, si on ne passe pas de props depuis le parent,
+// notre composant affichera des données par défaut
+
+class ChildComponent extends React.Component {
+    static defaultProps = {
+        name: 'Grover',
+        image: 'https://s-media-cache-ak0.pinimg.com/originals/2d/8a/4d/2d8a4d3cdb382cf0bd2c130ac5e2cd81.jpg'
+    }
+    render() {
+        return (
+            <div>
+                <img src={this.props.image} />
+                <h1>{this.props.name}</h1>
+            </div>
+        );
+    }
+}
+
+```
+
+---
+
 ### Les 'propsTypes'
 
 * Ils permettent de vérifier le type des 'props'. <!-- .element: class="fragment" -->

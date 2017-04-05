@@ -28,14 +28,13 @@
 
 * Ils sont utilisés pour passer des données aux enfants. <!-- .element: class="fragment" -->
 * Ils sont immutables. <!-- .element: class="fragment" -->
-* Ils sont plus performants que les états pour passer des données. <!-- .element: class="fragment" -->
 
 ---
 
 #### State
 
+* 'Snapshot' du composant. <!-- .element: class="fragment" -->
 * Ils sont mutables. <!-- .element: class="fragment" -->
-* Ils sont moins perfomants pour passer beaucoup de données. <!-- .element: class="fragment" -->
 
 ---
 
@@ -52,8 +51,7 @@ class Counter extends React.Component {
     }
   _incrementClick() {
       this.setState({
-        clickCount: this.state.clickCount + 1
-        // Au clique on ajoute 1 au compteur
+        clickCount: this.state.clickCount + 1 // Au clique ajoute 1 au compteur
       });
   }
   render() {
@@ -68,19 +66,6 @@ class Counter extends React.Component {
 }
 ReactDOM.render(<Counter />, document.querySelector('#root'));
 ```
-
----
-
-#### Dans les faits
-
----
-
-* Dans la plupart des cas les composants s'organisent ainsi:
-
-    * Un composant parent, qui définit des états. <!-- .element: class="fragment" -->
-    * Ces états sont passés en props aux enfants.<!-- .element: class="fragment" -->
-    * Les enfants récupèrent les états.<!-- .element: class="fragment" -->
-    * Les enfants ont très peu besoin de gérer les états (sauf cas spécifiques).<!-- .element: class="fragment" -->
 
 ---
 
@@ -291,6 +276,21 @@ class Component extends React.Component {
         })
     }
 }
+```
+
+---
+
+##### Asynchrone
+```javascript
+
+_incrementClick() {
+
+    this.setState((prevState, props) => {
+        // On définit une nouvelle valeur pour l'état 'firstState'
+        return {firstState: 'newValue' };
+    });
+}
+
 ```
 
 ---
