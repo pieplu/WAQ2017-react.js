@@ -258,3 +258,13 @@ ReactDOM.render(<Login />, node);
 
 // Tu peux voir le rendu sur : https://jsfiddle.net/x56t9nng/6/
 ```
+
+---
+
+### En résumé
+
+- Pour une communication parent -> enfant, on utilise des 'props'. <!-- .element: class="fragment" -->
+- Pour une communication enfant -> parent, on utilise une fonction de 'callback'. <!-- .element: class="fragment" -->
+- Les composants 'Stateless' sont des composants qui ne possèdent pas d'états. <!-- .element: class="fragment" -->
+- Les composants 'Statefull' sont des composants qui possède des états et un cycle de vie. <!-- .element: class="fragment" -->
+- L'attribut 'ref' nous permet de manipuler un compsant via l'API DOM. <!-- .element: class="fragment" -->
