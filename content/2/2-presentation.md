@@ -11,11 +11,17 @@
 
 ---
 
-### JSX
+### [JSX](https://facebook.github.io/react/docs/introducing-jsx.html)
 
 - JSX est une extension de la syntaxe de JavaScript. <!-- .element: class="fragment" -->
-- Facile à prendre en main. <!-- .element: class="fragment" -->
+- Doit être "transpilé". <!-- .element: class="fragment" -->
 - React fonctionne aussi sans JSX. <!-- .element: class="fragment" -->
+
+---
+
+```javascript
+var comp = <p>Un texte</p>;
+```
 
 ---
 
@@ -60,6 +66,18 @@ render() {
 
 ---
 
+###### Faire des conditions
+
+```javascript
+render() {
+    return(
+        {true ? 'toto' : 'titi'}
+    )
+}
+```
+
+---
+
 ###### Itérer sur un tableau
 
 ```javascript
@@ -77,15 +95,7 @@ render() {
 
 ---
 
-###### Faire des conditions
-
-```javascript
-render() {
-    return(
-        {true ? 'toto' : 'titi'}
-    )
-}
-```
+### JSX:<br/> Les petites choses à savoir
 
 ---
 
@@ -113,11 +123,7 @@ render() {
 
 ---
 
-### JSX:<br/> Les petites choses à savoir
-
----
-
-###### Pour ajouter une classe, vous faites...
+###### Ajouter une class ?
 
 ```javascript
 render() {
@@ -134,8 +140,9 @@ render() {
 
 ### Pourquoi ?
 
-* 'Class' et 'For' sont des 'namespaces' réservés. <!-- .element: class="fragment" -->
-* Il faut les remplacer par 'className' et 'htmlFor'. <!-- .element: class="fragment" -->
+### Namespace réservé de React <!-- .element: class="fragment" -->
+
+#### Il faut le remplacer par 'className'. <!-- .element: class="fragment" -->
 
 ---
 
@@ -183,9 +190,9 @@ render() {
 
 ### Qu'est-ce qu'un composant ?
 
-- On peut voir un composant comme une fonction. <!-- .element: class="fragment" -->
-- Il reçoit des données en paramètre et retourne du HTML. <!-- .element: class="fragment" -->
-- Ce sont de petits modules facilement réutilisables. <!-- .element: class="fragment" -->
+- On peut voir un composant comme une "super" fonction. <!-- .element: class="fragment" -->
+- Reçoit des données en paramètre et retourne du HTML. <!-- .element: class="fragment" -->
+- Petit module facilement réutilisable. <!-- .element: class="fragment" -->
 - Depuis React 14, on distingue deux types de composants: Stateless et Statefull. <!-- .element: class="fragment" -->
 
 ---
@@ -215,34 +222,38 @@ class MonComposant extends React.Component {
 
 ---
 
-### Rendre le composant dans le DOM
+## Ok
+### Comment j'affiche ça dans ma page?<!-- .element: class="fragment" -->
 
 ---
 
-### React nous permet de créer des composants mais ça s'arrête là.
-
-- Nous pouvons rendre les composants dans le DOM grâce à React-dom. <!-- .element: class="fragment" -->
-- React possède d'autres renders : <!-- .element: class="fragment" -->
-- React native (Mobile), React Blessed (App pour Terminal), React VR, React Canvas...<!-- .element: class="fragment" -->
+### React nous permet de créer des composants. 
+## Et ça s'arrête là.<!-- .element: class="fragment" -->
 
 ---
 
-###### Rendre un composant dans le DOM <small>1</small>
+### Mais...
+ 
+- On peut rendre les composants dans le DOM grâce à React-dom. <!-- .element: class="fragment" -->
+- Rendre pour mobile avec React native <!-- .element: class="fragment" -->
+- Dans le terminal avec React Blessed <!-- .element: class="fragment" -->
+- Etc (React VR, React Canvas...) <!-- .element: class="fragment" -->
+
+---
+
+<!-- .slide: data-background-image="images/stars.gif"  -->
+###### Rendre un composant dans le DOM <small>[1](https://jsfiddle.net/uj90kq60/)</small>
 
 ```javascript
-import React from 'react'; // On importe React sous forme de module (cf: Appendice 1)
+import React from 'react'; // On importe React sous forme de module
 import ReactDOM from 'react-dom';
 
-// Maintenant que React est importé on va créer une classe
-// On va l'appeler 'MonComposant'
-// Cette classe va hériter de la classe React.Component
+
 class MonComposant extends React.Component {
-    // On va utiliser la fonction 'render'
-    // pour retourner du Html
     render() {
         return (
             <p>Mon premier composant</p>
-        ); // Markup qui sera retourné par le composant
+        );
     }
 }
 

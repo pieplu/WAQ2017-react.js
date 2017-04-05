@@ -114,21 +114,20 @@ class Form extends React.Component {
 
 ---
 
-* Notre composant est réutilisable, c'est chouette !
+* Notre composant Input est réutilisable, c'est chouette !
 * Cependant, si dans 'name' je lui passe une fonction... <!-- .element: class="fragment" -->
 
 ---
 
-##### Sortie de la console du navigateur
+<!-- .slide: data-background-image="images/chat-drame.gif"  -->
+#### Et là, c'est le drame !
+
+<small>console:</small>
 ```html
 <input data-reactroot=from"" type="text" name="function () {
             window.runnerWindow.proxyConsole.log('focus');
         }" placeholder="Nom d'utilisateur">
 ```
-
----
-
-* Et là, c'est le drame !
 
 ---
 
@@ -158,30 +157,9 @@ class Input extends React.Component {
 
 ---
 
-#### Exemple: Form
-```javascript
-class Form extends React.Component {
-    constructor(props) {
-        super(props);
-        this._onFocus = () => {
-            console.log('focus');
-        };
-    }
-    render() {
-        return (
-            <Input
-                type="text"
-                name={this._onFocus}
-                placeholder="Nom d'utilisateur"
-                onFocus={this._onFocus} />
-        );
-    }
-}
-```
+#### Un peu plus explicite...
 
----
-
-#### Exemple: sortie de console du composant
+<small>console:</small>
 ```javascript
 Warning: Failed propType: Invalid prop `name` of type `function` supplied
 to `Input`, expected `string`. Check the render method of `Form`.
@@ -195,18 +173,21 @@ to `Input`, expected `string`. Check the render method of `Form`.
 
 ---
 
-### Le cas de children
-
-* React intègre par défaut un props 'children'. <!-- .element: class="fragment" -->
-* Ce props 'children' retourne tout ce qui est mis entre la balise ouvrante et fermante du composant. <!-- .element: class="fragment" -->
-* 'props.children' peut être à la fois un tableau ou un objet. <!-- .element: class="fragment" -->
-* Si on lui passe plusieurs composants, ce sera un Array, sinon ce sera un objet. <!-- .element: class="fragment" -->
+### Les enfants (Le cas de children)
 
 ---
 
 #### Component Inception
 
 ![](images/react-child-component-diagram.svg)<!-- .element: class="img--no-border" -->
+
+---
+
+
+* React intègre par défaut un props 'children'. <!-- .element: class="fragment" -->
+* Ce props 'children' retourne tout ce qui est mis entre la balise ouvrante et fermante du composant. <!-- .element: class="fragment" -->
+* 'props.children' peut être à la fois un tableau ou un objet. <!-- .element: class="fragment" -->
+* Si on lui passe plusieurs composants, ce sera un Array, sinon ce sera un objet. <!-- .element: class="fragment" -->
 
 ---
 
