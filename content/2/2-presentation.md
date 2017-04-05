@@ -138,9 +138,12 @@ render() {
 
 ---
 
+<!-- .slide: data-background-image="images/obama.gif"  -->
 ### Pourquoi ?
 
-### Namespace réservé de React <!-- .element: class="fragment" -->
+---
+
+### Namespace réservé de React
 
 #### Il faut le remplacer par 'className'. <!-- .element: class="fragment" -->
 
